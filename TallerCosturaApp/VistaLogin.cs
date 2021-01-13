@@ -38,6 +38,7 @@ namespace TallerCosturaApp
 
         private void PictureBox1_Click(object sender, EventArgs e)
         {
+            //Prueba para el git en vistas
             string[] userInput = new string[2];
             userInput[0] = txtUser.Text.ToString();
             userInput[1] = txtPassword.Text.ToString();

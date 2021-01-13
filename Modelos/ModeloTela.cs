@@ -12,6 +12,7 @@ namespace Modelos
     {
         Conexion c;
         SqlConnection conexion;
+        //Prueba para el git de Modelos
         public ModeloTela()
         {
             this.c = new Conexion();
