@@ -107,6 +107,7 @@ namespace TallerCosturaApp
                     DATA_NUEVO_PRODUCTO.Add(color); 
                     /*INICIA EL PROCESO DE MAQUILAR*/
 
+
                 }
 
                 if (Controladores.FunctionsTools.ValidateTextBox(txtModeloProducto))
