@@ -8,6 +8,7 @@ namespace Controladores
 {
     class Producto
     {
+        //Prueba git de controladores
         private int idProducto { set; get; }
         private string nombreProducto {set;get;}
         private  string tallaProducto {set;get;}
