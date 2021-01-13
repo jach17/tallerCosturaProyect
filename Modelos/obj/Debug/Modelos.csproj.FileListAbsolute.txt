@@ -1,0 +1,12 @@
+C:\Users\Jach\source\repos\Modelos\bin\Debug\Modelos.dll
+C:\Users\Jach\source\repos\Modelos\bin\Debug\Modelos.pdb
+C:\Users\Jach\source\repos\Modelos\obj\Debug\Modelos.csprojAssemblyReference.cache
+C:\Users\Jach\source\repos\Modelos\obj\Debug\Modelos.csproj.CoreCompileInputs.cache
+C:\Users\Jach\source\repos\Modelos\obj\Debug\Modelos.dll
+C:\Users\Jach\source\repos\Modelos\obj\Debug\Modelos.pdb
+C:\Users\Jach\source\repos\TallerCosturaProyecto\Modelos\bin\Debug\Modelos.dll
+C:\Users\Jach\source\repos\TallerCosturaProyecto\Modelos\bin\Debug\Modelos.pdb
+C:\Users\Jach\source\repos\TallerCosturaProyecto\Modelos\obj\Debug\Modelos.csprojAssemblyReference.cache
+C:\Users\Jach\source\repos\TallerCosturaProyecto\Modelos\obj\Debug\Modelos.csproj.CoreCompileInputs.cache
+C:\Users\Jach\source\repos\TallerCosturaProyecto\Modelos\obj\Debug\Modelos.dll
+C:\Users\Jach\source\repos\TallerCosturaProyecto\Modelos\obj\Debug\Modelos.pdb

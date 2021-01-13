@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{30A57B6C-C0AA-45FF-9558-CA26FDA6495D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TallerCosturaApp</RootNamespace>
+    <AssemblyName>TallerCosturaApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CardPedidosPendientes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CardPedidosPendientes.Designer.cs">
+      <DependentUpon>CardPedidosPendientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CardTodosPedidos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CardTodosPedidos.Designer.cs">
+      <DependentUpon>CardTodosPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CardVentas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CardVentas.Designer.cs">
+      <DependentUpon>CardVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaGestionaPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaGestionaPedidos.Designer.cs">
+      <DependentUpon>VistaGestionaPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaGestionaInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaGestionaInventario.Designer.cs">
+      <DependentUpon>VistaGestionaInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaInventario.Designer.cs">
+      <DependentUpon>VistaInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaNuevoPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaNuevoPedido.Designer.cs">
+      <DependentUpon>VistaNuevoPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaPedidosPendientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaPedidosPendientes.Designer.cs">
+      <DependentUpon>VistaPedidosPendientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaLogin.Designer.cs">
+      <DependentUpon>VistaLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CardPedidosPendientes.resx">
+      <DependentUpon>CardPedidosPendientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardTodosPedidos.resx">
+      <DependentUpon>CardTodosPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardVentas.resx">
+      <DependentUpon>CardVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaGestionaPedidos.resx">
+      <DependentUpon>VistaGestionaPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaGestionaInventario.resx">
+      <DependentUpon>VistaGestionaInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaInventario.resx">
+      <DependentUpon>VistaInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaNuevoPedido.resx">
+      <DependentUpon>VistaNuevoPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaPedidosPendientes.resx">
+      <DependentUpon>VistaPedidosPendientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaLogin.resx">
+      <DependentUpon>VistaLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Controladores\Controladores.csproj">
+      <Project>{1cddbbdd-c531-49f8-b5a0-bb0a429dbb9a}</Project>
+      <Name>Controladores</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ampliar_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\interrogacion_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maquina_coser_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signup_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_Bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnMates.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnProovs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAdd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnDelete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnUpdate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAddProducto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnHacerPedido.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnLogin.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
