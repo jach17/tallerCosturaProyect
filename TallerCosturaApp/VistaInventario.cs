@@ -12,9 +12,14 @@ namespace TallerCosturaApp
 {
     public partial class VistaInventario_ : Form
     {
+        Controladores.ControllerTela oct;
         public VistaInventario_()
         {
             InitializeComponent();
+            oct = new Controladores.ControllerTela();
+            dgvInventario.DataSource = oct.getInventario();
+            dgvInventario.Refresh();
+
         }
 
         private void BtnPedidosPendientes_Click(object sender, EventArgs e)
