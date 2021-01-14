@@ -7,15 +7,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Controladores;
 
 namespace TallerCosturaApp
 {
     public partial class CardGestionaInventario : UserControl
     {
-
+        ControllerProveedor ocp;
         public CardGestionaInventario()
         {
             InitializeComponent();
+            ocp = new ControllerProveedor();
+            setProveedores(cbxProveedor);
+            
+        }
+
+        public void setProveedores(ComboBox cbx)
+        {
+            for (int i=0; i< ocp.getGestionProveedores().Count;i++)
+            {
+                Proveedor p = (Proveedor)ocp.getGestionProveedores()[i];
+                cbx.Items.Add(p.NombreProv);
+            }
         }
 
         public string[] DATA_INVENTARIO()

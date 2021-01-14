@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -29,6 +30,20 @@ namespace Modelos
             adaptador.Fill(tabla);
             this.conexion.Close();
             return tabla;
+        }
+        public ArrayList getNombreProveedores()
+        {
+            ArrayList LISTA_PROVEEDORES = new ArrayList() ;
+            this.conexion.Open();
+            string query = "SELECT nombreProv FROM PROVEEDOR;";
+            SqlCommand cmd = new SqlCommand(query, this.conexion);
+            SqlDataReader registro = cmd.ExecuteReader();
+            while (registro.Read())
+            {
+                LISTA_PROVEEDORES.Add(registro["nombreProv"]);
+            }
+            this.conexion.Close();
+            return LISTA_PROVEEDORES;
         }
     }
 }

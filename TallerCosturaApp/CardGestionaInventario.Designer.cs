@@ -145,11 +145,6 @@
             this.cbxProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxProveedor.Font = new System.Drawing.Font("Eras Medium ITC", 12F);
             this.cbxProveedor.FormattingEnabled = true;
-            this.cbxProveedor.Items.AddRange(new object[] {
-            "S",
-            "M",
-            "L",
-            "XL"});
             this.cbxProveedor.Location = new System.Drawing.Point(31, 240);
             this.cbxProveedor.Name = "cbxProveedor";
             this.cbxProveedor.Size = new System.Drawing.Size(205, 27);
