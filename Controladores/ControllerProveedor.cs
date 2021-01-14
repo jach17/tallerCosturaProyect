@@ -33,6 +33,14 @@ namespace Controladores
 
         }
 
+        public void registrarNuevoProveedor(Proveedor prov)
+        {
+            omp.registrarNuevoProveedor(
+                prov.NombreProv, prov.ApProv, prov.AmProv, prov.RfcProv, prov.DireccionProv, prov.NumTelProv, prov.EmailProv);
+
+                
+
+        }
 
         public DataTable getProveedores()
         {

@@ -14,7 +14,7 @@ namespace Controladores
         public string AmProv {get; set;}
         public string RfcProv {get; set;}
         public string DireccionProv {get; set;}
-        public int NumTelProv {get; set;}
+        public string NumTelProv {get; set;}
         public string EmailProv {get; set;}
 
 

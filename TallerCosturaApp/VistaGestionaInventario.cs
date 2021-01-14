@@ -86,8 +86,16 @@ namespace TallerCosturaApp
         {
             if (this.contentCards.Controls.Contains(cgp))
             {
+                Controladores.Proveedor prov = new Controladores.Proveedor();
                 string[] DATA_PROVEEDOR = cgp.DATA_PROVEEDOR();
-                
+                prov.NombreProv = DATA_PROVEEDOR[0];
+                prov.ApProv = DATA_PROVEEDOR[1];
+                prov.AmProv= DATA_PROVEEDOR[2];
+                prov.RfcProv = DATA_PROVEEDOR[3];
+                prov.DireccionProv = DATA_PROVEEDOR[4];
+                prov.NumTelProv= DATA_PROVEEDOR[5];
+                prov.EmailProv = DATA_PROVEEDOR[6];
+
                 cgp.clearData();
             }
             if (this.contentCards.Controls.Contains(cgi))

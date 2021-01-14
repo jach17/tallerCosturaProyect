@@ -36,6 +36,23 @@ namespace Modelos
 
         }
 
+        public void registrarNuevoProveedor(
+            string nombreProv,
+            string apProv,
+            string amProv,
+            string rfcProv,
+            string direccionProv,
+            string numTelProv, 
+            string emailProv
+            )
+        {
+            this.conexion.Open();
+            string query = "INSERT INTO PROVEEDOR VALUES('"+nombreProv+"', '"+apProv+"', '"+amProv+"','"+rfcProv+"', '"+direccionProv+"', '"+numTelProv+"', '"+emailProv+"');";
+            SqlCommand cmd = new SqlCommand(query, this.conexion);
+            cmd.ExecuteNonQuery();
+            this.conexion.Close();
+        }
+
         public DataTable getProveedores()
         {
             this.conexion.Open();
