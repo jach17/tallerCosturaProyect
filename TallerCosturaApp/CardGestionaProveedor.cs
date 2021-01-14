@@ -27,7 +27,25 @@ namespace TallerCosturaApp
             DATA_PROOV[4] = txtDireccion.Text;
             DATA_PROOV[5] = txtNumTel.Text;
             DATA_PROOV[6] = txtEmail.Text;
+
             return DATA_PROOV;
+
+        }
+
+        public void clearData()
+        {
+            txtName.Text="";
+            txtApPat.Text="";
+            txtApMat.Text="";
+            txtRFC.Text="";
+            txtDireccion.Text="";
+            txtNumTel.Text="";
+            txtEmail.Text="";
+
+        }
+
+        private void TxtName_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

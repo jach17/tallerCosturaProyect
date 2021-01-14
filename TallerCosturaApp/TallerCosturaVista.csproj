@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CardGestionaProveedor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CardGestionaProveedor.Designer.cs">
+      <DependentUpon>CardGestionaProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="CardPedidosPendientes.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CardGestionaProveedor.resx">
+      <DependentUpon>CardGestionaProveedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CardPedidosPendientes.resx">
       <DependentUpon>CardPedidosPendientes.cs</DependentUpon>
     </EmbeddedResource>

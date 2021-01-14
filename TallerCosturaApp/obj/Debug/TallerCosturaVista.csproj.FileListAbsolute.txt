@@ -67,3 +67,4 @@ C:\Users\Jach\source\repos\TallerCosturaProyecto\tallerCosturaProyecto\TallerCos
 C:\Users\Jach\source\repos\TallerCosturaProyecto\tallerCosturaProyecto\TallerCosturaApp\obj\Debug\TallerCosturaVista.csproj.CopyComplete
 C:\Users\Jach\source\repos\TallerCosturaProyecto\tallerCosturaProyecto\TallerCosturaApp\obj\Debug\TallerCosturaApp.exe
 C:\Users\Jach\source\repos\TallerCosturaProyecto\tallerCosturaProyecto\TallerCosturaApp\obj\Debug\TallerCosturaApp.pdb
+C:\Users\Jach\source\repos\TallerCosturaProyecto\tallerCosturaProyecto\TallerCosturaApp\obj\Debug\TallerCosturaApp.CardGestionaProveedor.resources
