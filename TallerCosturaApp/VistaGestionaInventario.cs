@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -91,14 +92,16 @@ namespace TallerCosturaApp
             }
             if (this.contentCards.Controls.Contains(cgi))
             {
-                string[] DATA_INV = cgi.DATA_INVENTARIO();
+                ArrayList DATA_INV = cgi.DATA_INVENTARIO();
                 tela = new Controladores.Tela();
 
-                tela.NombreTela = DATA_INV[0];
-                tela.ColorTela = DATA_INV[1];
+                tela.NombreTela = DATA_INV[0].ToString();
+                tela.ColorTela = DATA_INV[1].ToString();
                 tela.CantidadExistente = Convert.ToInt32(DATA_INV[2]);
                 tela.IdProv = Convert.ToInt32(DATA_INV[3]);
                 oct.inserTela(tela);
+                this.dgvGestion.DataSource = oct.getGestionInventario();
+                dgvGestion.Refresh();
                 cgi.clearData();
             }
         }

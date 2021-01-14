@@ -27,6 +27,11 @@ namespace Controladores
             return LISTA_PROVEEDORES;
         }
 
+        public int getIdProveedorFromNombre(string name)
+        {
+            return omp.getIdProveedorFromNombre(name);
+
+        }
 
 
         public DataTable getProveedores()

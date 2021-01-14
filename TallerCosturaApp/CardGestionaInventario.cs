@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controladores;
+using System.Collections;
 
 namespace TallerCosturaApp
 {
@@ -28,17 +29,23 @@ namespace TallerCosturaApp
             {
                 Proveedor p = (Proveedor)ocp.getGestionProveedores()[i];
                 cbx.Items.Add(p.NombreProv);
+
             }
         }
 
-        public string[] DATA_INVENTARIO()
+        public ArrayList DATA_INVENTARIO()
         {
-            string[] DATA_INV = new string[4];
-            DATA_INV[0] = txtNombreTela.Text;
-            DATA_INV[1] = txtColorTela.Text;
-            DATA_INV[2] = txtCantidadExistencia.Text;
-            DATA_INV[3] = cbxProveedor.Text;
+            ArrayList DATA_INV = new ArrayList(); ;
+            DATA_INV.Add(txtNombreTela.Text);
+            DATA_INV.Add(txtColorTela.Text);
+            DATA_INV.Add(txtCantidadExistencia.Text);
+            DATA_INV.Add(getIdProveedorFromName());
             return DATA_INV;
+        }
+        public int getIdProveedorFromName()
+        {
+            
+            return ocp.getIdProveedorFromNombre(cbxProveedor.Text);
         }
 
         public void clearData()
@@ -50,6 +57,11 @@ namespace TallerCosturaApp
         }
 
         private void CbxProveedor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

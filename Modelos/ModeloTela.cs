@@ -25,7 +25,7 @@ namespace Modelos
         public void insertTela(string nombreTela, string colorTela, int cantidadExistencia, int idProv)
         {
             this.conexion.Open();
-            string query = "INSERT INTO TELA VALUES ('Manta Bondeada', 'Negra', 25, 2);";
+            string query = "INSERT INTO TELA VALUES ('"+nombreTela+"', '"+colorTela+"', "+cantidadExistencia+", "+idProv+");";
             SqlCommand cmd = new SqlCommand(query, this.conexion);
             cmd.ExecuteNonQuery();
             this.conexion.Close();

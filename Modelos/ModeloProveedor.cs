@@ -20,11 +20,11 @@ namespace Modelos
 
         }
 
-        public int getIdProveedorFromNombre(string nombreProveedor, string apProveedor, string amProveedor)
+        public int getIdProveedorFromNombre(string nombreProveedor)
         {
             int id = 0;
             this.conexion.Open();
-            string query = "SELECT idProv FROM PROVEEDOR WHERE nombreProv='"+nombreProveedor+"' AND apProv='"+apProveedor+"' AND amProv='"+amProveedor+"';";
+            string query = "SELECT idProv FROM PROVEEDOR WHERE nombreProv='"+nombreProveedor+"';";
             SqlCommand cmd = new SqlCommand(query, this.conexion);
             SqlDataReader registro = cmd.ExecuteReader();
             if (registro.Read())

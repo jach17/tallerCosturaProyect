@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbxProveedor = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtCantidadExistencia = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -36,8 +38,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtNombreTela = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbxProveedor = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +58,29 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(290, 330);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
+            // 
+            // cbxProveedor
+            // 
+            this.cbxProveedor.BackColor = System.Drawing.Color.White;
+            this.cbxProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxProveedor.Font = new System.Drawing.Font("Eras Medium ITC", 12F);
+            this.cbxProveedor.FormattingEnabled = true;
+            this.cbxProveedor.Location = new System.Drawing.Point(31, 240);
+            this.cbxProveedor.Name = "cbxProveedor";
+            this.cbxProveedor.Size = new System.Drawing.Size(205, 27);
+            this.cbxProveedor.TabIndex = 23;
+            this.cbxProveedor.SelectedIndexChanged += new System.EventHandler(this.CbxProveedor_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Eras Medium ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(27, 157);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(233, 19);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Cantidad de tela en existencia:";
             // 
             // label5
             // 
@@ -128,28 +151,6 @@
             this.label1.Size = new System.Drawing.Size(143, 19);
             this.label1.TabIndex = 6;
             this.label1.Text = "Nombre de la tela:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Eras Medium ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(27, 157);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(233, 19);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Cantidad de tela en existencia:";
-            // 
-            // cbxProveedor
-            // 
-            this.cbxProveedor.BackColor = System.Drawing.Color.White;
-            this.cbxProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxProveedor.Font = new System.Drawing.Font("Eras Medium ITC", 12F);
-            this.cbxProveedor.FormattingEnabled = true;
-            this.cbxProveedor.Location = new System.Drawing.Point(31, 240);
-            this.cbxProveedor.Name = "cbxProveedor";
-            this.cbxProveedor.Size = new System.Drawing.Size(205, 27);
-            this.cbxProveedor.TabIndex = 23;
-            this.cbxProveedor.SelectedIndexChanged += new System.EventHandler(this.CbxProveedor_SelectedIndexChanged);
             // 
             // CardGestionaInventario
             // 
