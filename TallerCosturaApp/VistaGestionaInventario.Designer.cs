@@ -274,9 +274,9 @@
             // 
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = global::TallerCosturaApp.Properties.Resources.btnAdd;
-            this.pictureBox4.Location = new System.Drawing.Point(209, 314);
+            this.pictureBox4.Location = new System.Drawing.Point(209, 310);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(97, 31);
+            this.pictureBox4.Size = new System.Drawing.Size(97, 36);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;

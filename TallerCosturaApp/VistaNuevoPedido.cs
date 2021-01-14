@@ -176,7 +176,11 @@ namespace TallerCosturaApp
                 cnp.setProducto(DATA_NUEVO_PRODUCTO);
                 MessageBox.Show("Producto agregado con éxito!", "A V I S O");
                 idProductoLastMaquilar = cnp.lastId();
+
+
                 ocm.setMaquilar(idTelaUsada, telaUsada, idProductoLastMaquilar);
+
+
                 txtDescripcion.Text = DescripcionCompleta;
                 Controladores.FunctionsTools.ClearTextBox(txtNombreProducto);
                 //Controladores.FunctionsTools.ClearTextBox(txtTallaProducto);

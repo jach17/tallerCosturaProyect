@@ -16,6 +16,7 @@ namespace TallerCosturaApp
         CardGestionaInventario cgi;
         Controladores.ControllerProveedor ocp;
         Controladores.ControllerTela oct;
+        Controladores.Tela tela;
 
 
         public VistaGestionaInventario()
@@ -85,13 +86,19 @@ namespace TallerCosturaApp
             if (this.contentCards.Controls.Contains(cgp))
             {
                 string[] DATA_PROVEEDOR = cgp.DATA_PROVEEDOR();
-                MessageBox.Show("Nombre del proveedor: " + DATA_PROVEEDOR[0]);
+                
                 cgp.clearData();
             }
             if (this.contentCards.Controls.Contains(cgi))
             {
                 string[] DATA_INV = cgi.DATA_INVENTARIO();
-                MessageBox.Show("Nombre de la tela: " + DATA_INV[0]);
+                tela = new Controladores.Tela();
+
+                tela.NombreTela = DATA_INV[0];
+                tela.ColorTela = DATA_INV[1];
+                tela.CantidadExistente = Convert.ToInt32(DATA_INV[2]);
+                tela.IdProv = Convert.ToInt32(DATA_INV[3]);
+                oct.inserTela(tela);
                 cgi.clearData();
             }
         }
