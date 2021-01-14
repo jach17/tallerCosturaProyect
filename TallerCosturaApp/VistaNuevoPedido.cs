@@ -81,11 +81,15 @@ namespace TallerCosturaApp
             this.Close();
         }
         Boolean addProducto = true;
-        public string getColorFromCadena(string cadena)
+
+
+        
+        public string[] getDataTelaFromCadena(string cadena)
         {
-            string color = cadena.Substring(cadena.LastIndexOf(' ') + 1);
-            return color;
+            string[] datos = cadena.Split(' ');
+            return datos; 
         }
+
         private void PictureBox2_Click(object sender, EventArgs e)
         {
             if (addProducto)
@@ -103,7 +107,7 @@ namespace TallerCosturaApp
 
                 if (cbxTipoMaterial.Text!="")
                 {
-                    string color = getColorFromCadena(cbxTipoMaterial.Text);
+                    string color = getDataTelaFromCadena(cbxTipoMaterial.Text)[2];
                     DATA_NUEVO_PRODUCTO.Add(color); 
                     /*INICIA EL PROCESO DE MAQUILAR*/
 
