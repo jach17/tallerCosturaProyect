@@ -10,3 +10,9 @@ C:\Users\Jach\source\repos\TallerCosturaProyecto\Modelos\obj\Debug\Modelos.cspro
 C:\Users\Jach\source\repos\TallerCosturaProyecto\Modelos\obj\Debug\Modelos.csproj.CoreCompileInputs.cache
 C:\Users\Jach\source\repos\TallerCosturaProyecto\Modelos\obj\Debug\Modelos.dll
 C:\Users\Jach\source\repos\TallerCosturaProyecto\Modelos\obj\Debug\Modelos.pdb
+C:\Users\Jach\source\repos\TallerCosturaProyecto\tallerCosturaProyecto\Modelos\bin\Debug\Modelos.dll
+C:\Users\Jach\source\repos\TallerCosturaProyecto\tallerCosturaProyecto\Modelos\bin\Debug\Modelos.pdb
+C:\Users\Jach\source\repos\TallerCosturaProyecto\tallerCosturaProyecto\Modelos\obj\Debug\Modelos.csprojAssemblyReference.cache
+C:\Users\Jach\source\repos\TallerCosturaProyecto\tallerCosturaProyecto\Modelos\obj\Debug\Modelos.csproj.CoreCompileInputs.cache
+C:\Users\Jach\source\repos\TallerCosturaProyecto\tallerCosturaProyecto\Modelos\obj\Debug\Modelos.dll
+C:\Users\Jach\source\repos\TallerCosturaProyecto\tallerCosturaProyecto\Modelos\obj\Debug\Modelos.pdb
