@@ -52,7 +52,6 @@
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.addProductoControles = new System.Windows.Forms.Panel();
-            this.cbxTipoMaterial = new System.Windows.Forms.ComboBox();
             this.btnAddProducto = new System.Windows.Forms.PictureBox();
             this.txtPrecioProducto = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -61,10 +60,11 @@
             this.txtDiseñoProducto = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtTallaProducto = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNombreProducto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.cbxTallaProducto = new System.Windows.Forms.ComboBox();
+            this.cbxTipoMaterial = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.toolBarApp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -378,7 +378,6 @@
             // addProductoControles
             // 
             this.addProductoControles.BackColor = System.Drawing.Color.White;
-            this.addProductoControles.Controls.Add(this.cbxTallaProducto);
             this.addProductoControles.Controls.Add(this.cbxTipoMaterial);
             this.addProductoControles.Controls.Add(this.btnAddProducto);
             this.addProductoControles.Controls.Add(this.txtPrecioProducto);
@@ -388,6 +387,7 @@
             this.addProductoControles.Controls.Add(this.txtDiseñoProducto);
             this.addProductoControles.Controls.Add(this.label7);
             this.addProductoControles.Controls.Add(this.label4);
+            this.addProductoControles.Controls.Add(this.txtTallaProducto);
             this.addProductoControles.Controls.Add(this.label3);
             this.addProductoControles.Controls.Add(this.txtNombreProducto);
             this.addProductoControles.Controls.Add(this.label2);
@@ -396,17 +396,6 @@
             this.addProductoControles.Name = "addProductoControles";
             this.addProductoControles.Size = new System.Drawing.Size(621, 168);
             this.addProductoControles.TabIndex = 0;
-            // 
-            // cbxTipoMaterial
-            // 
-            this.cbxTipoMaterial.BackColor = System.Drawing.Color.White;
-            this.cbxTipoMaterial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxTipoMaterial.Font = new System.Drawing.Font("Eras Medium ITC", 12F);
-            this.cbxTipoMaterial.FormattingEnabled = true;
-            this.cbxTipoMaterial.Location = new System.Drawing.Point(194, 78);
-            this.cbxTipoMaterial.Name = "cbxTipoMaterial";
-            this.cbxTipoMaterial.Size = new System.Drawing.Size(204, 27);
-            this.cbxTipoMaterial.TabIndex = 21;
             // 
             // btnAddProducto
             // 
@@ -490,6 +479,16 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Tipo de material:";
             // 
+            // txtTallaProducto
+            // 
+            this.txtTallaProducto.BackColor = System.Drawing.Color.White;
+            this.txtTallaProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTallaProducto.Font = new System.Drawing.Font("Eras Medium ITC", 12F);
+            this.txtTallaProducto.Location = new System.Drawing.Point(194, 47);
+            this.txtTallaProducto.Name = "txtTallaProducto";
+            this.txtTallaProducto.Size = new System.Drawing.Size(204, 26);
+            this.txtTallaProducto.TabIndex = 3;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -520,21 +519,16 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Nombre del producto:";
             // 
-            // cbxTallaProducto
+            // cbxTipoMaterial
             // 
-            this.cbxTallaProducto.BackColor = System.Drawing.Color.White;
-            this.cbxTallaProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxTallaProducto.Font = new System.Drawing.Font("Eras Medium ITC", 12F);
-            this.cbxTallaProducto.FormattingEnabled = true;
-            this.cbxTallaProducto.Items.AddRange(new object[] {
-            "S",
-            "M",
-            "L",
-            "XL"});
-            this.cbxTallaProducto.Location = new System.Drawing.Point(194, 47);
-            this.cbxTallaProducto.Name = "cbxTallaProducto";
-            this.cbxTallaProducto.Size = new System.Drawing.Size(204, 27);
-            this.cbxTallaProducto.TabIndex = 22;
+            this.cbxTipoMaterial.BackColor = System.Drawing.Color.White;
+            this.cbxTipoMaterial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxTipoMaterial.Font = new System.Drawing.Font("Eras Medium ITC", 12F);
+            this.cbxTipoMaterial.FormattingEnabled = true;
+            this.cbxTipoMaterial.Location = new System.Drawing.Point(194, 78);
+            this.cbxTipoMaterial.Name = "cbxTipoMaterial";
+            this.cbxTipoMaterial.Size = new System.Drawing.Size(204, 27);
+            this.cbxTipoMaterial.TabIndex = 21;
             // 
             // VistaNuevoPedido
             // 
@@ -594,12 +588,12 @@
         private System.Windows.Forms.TextBox txtDiseñoProducto;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtTallaProducto;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNombreProducto;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox btnAddProducto;
         private System.Windows.Forms.PictureBox btnHacerPedido;
         private System.Windows.Forms.ComboBox cbxTipoMaterial;
-        private System.Windows.Forms.ComboBox cbxTallaProducto;
     }
 }

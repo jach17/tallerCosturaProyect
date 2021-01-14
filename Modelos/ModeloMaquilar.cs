@@ -15,16 +15,12 @@ namespace Modelos
         public ModeloMaquilar()
         {
             c = new Conexion();
-            conexion = c.getConexion();
+            SqlConnection conexion = c.getConexion();
         }
-        public void setMaquilar(int idTela, int cantidadTela, int idProducto)
+        public void getMaquilar()
         {
             this.conexion.Open();
-            string query = "INSERT INTO MAQUILAR VALUES (" + idTela + ", " + cantidadTela + ", " + idProducto + ");";
-            SqlCommand cmd = new SqlCommand(query, this.conexion);
-            cmd.ExecuteNonQuery();
-            this.conexion.Close();
-
+            
         }
 
     }

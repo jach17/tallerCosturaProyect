@@ -19,20 +19,6 @@ namespace Modelos
             this.conexion = c.getConexion();
         }
 
-        public int getIdTelaForMaquilar(string nombreTela, string colorTela)
-        {
-            int id = 0;
-            this.conexion.Open();
-            string query = "SELECT * FROM TELA WHERE nombreTela='"+nombreTela+"' AND colorTela='"+colorTela+"';";
-            SqlCommand cmd = new SqlCommand(query, this.conexion);
-            SqlDataReader registro = cmd.ExecuteReader();
-            if (registro.Read())
-            {
-                id = Convert.ToInt32(registro["idTela"]);
-            }
-            this.conexion.Close();
-            return id;
-        }
 
         public int getLastIdProduct()
         {

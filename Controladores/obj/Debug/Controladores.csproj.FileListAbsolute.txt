@@ -16,12 +16,3 @@ C:\Users\Jach\source\repos\TallerCosturaProyecto\Controladores\obj\Debug\Control
 C:\Users\Jach\source\repos\TallerCosturaProyecto\Controladores\obj\Debug\Controladores.csproj.CopyComplete
 C:\Users\Jach\source\repos\TallerCosturaProyecto\Controladores\obj\Debug\Controladores.dll
 C:\Users\Jach\source\repos\TallerCosturaProyecto\Controladores\obj\Debug\Controladores.pdb
-C:\Users\Jach\source\repos\TallerCosturaProyecto\tallerCosturaProyecto\Controladores\bin\Debug\Controladores.dll
-C:\Users\Jach\source\repos\TallerCosturaProyecto\tallerCosturaProyecto\Controladores\bin\Debug\Controladores.pdb
-C:\Users\Jach\source\repos\TallerCosturaProyecto\tallerCosturaProyecto\Controladores\bin\Debug\Modelos.dll
-C:\Users\Jach\source\repos\TallerCosturaProyecto\tallerCosturaProyecto\Controladores\bin\Debug\Modelos.pdb
-C:\Users\Jach\source\repos\TallerCosturaProyecto\tallerCosturaProyecto\Controladores\obj\Debug\Controladores.csprojAssemblyReference.cache
-C:\Users\Jach\source\repos\TallerCosturaProyecto\tallerCosturaProyecto\Controladores\obj\Debug\Controladores.csproj.CoreCompileInputs.cache
-C:\Users\Jach\source\repos\TallerCosturaProyecto\tallerCosturaProyecto\Controladores\obj\Debug\Controladores.csproj.CopyComplete
-C:\Users\Jach\source\repos\TallerCosturaProyecto\tallerCosturaProyecto\Controladores\obj\Debug\Controladores.dll
-C:\Users\Jach\source\repos\TallerCosturaProyecto\tallerCosturaProyecto\Controladores\obj\Debug\Controladores.pdb

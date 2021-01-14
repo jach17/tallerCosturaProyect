@@ -17,19 +17,6 @@ namespace TallerCosturaApp
         Controladores.ControllerTela ct;
         ArrayList MATERIALES_DISPONIBLES;
 
-
-
-        /*para maquilar*/
-
-        int telaUsada;
-        int idTelaUsada;
-        int idProductoLastMaquilar;
-        Controladores.ControllerMaquilar ocm;
-
-
-
-        string DescripcionCompleta = "";
-
         public VistaNuevoPedido()
         {
             InitializeComponent();
@@ -37,7 +24,6 @@ namespace TallerCosturaApp
             ct = new Controladores.ControllerTela();
             MATERIALES_DISPONIBLES = ct.getDataTelas();
             createMaterialesDisponiblesText(this.cbxTipoMaterial);
-            ocm = new Controladores.ControllerMaquilar();
 
 
             /*this.cbxTipoMaterial.Items.Add("Elemento 1");
@@ -95,40 +81,11 @@ namespace TallerCosturaApp
             this.Close();
         }
         Boolean addProducto = true;
-
-
-        
-        public string[] getDataTelaFromCadena(string cadena)
+        public string getColorFromCadena(string cadena)
         {
-            string[] datos = cadena.Split(' ');
-            return datos; 
+            string color = cadena.Substring(cadena.LastIndexOf(' ') + 1);
+            return color;
         }
-
-        public int calculaTelaUsada(string talla)
-        {
-            if (talla=="S")
-            {
-                return 2;
-            }
-            else if(talla=="M")
-            {
-                return 4;
-            }
-            else if (talla=="L")
-            {
-                return 8;
-            }
-            else if (talla == "XL")
-            {
-                return 10;
-            }
-            else
-            {
-                return 0;
-            }
-        }
-
-
         private void PictureBox2_Click(object sender, EventArgs e)
         {
             if (addProducto)
@@ -137,25 +94,18 @@ namespace TallerCosturaApp
                 if (Controladores.FunctionsTools.ValidateTextBox(txtNombreProducto))
                 {
                     DATA_NUEVO_PRODUCTO.Add(txtNombreProducto.Text);
-                    DescripcionCompleta += txtNombreProducto.Text;
+                    txtDescripcion.Text = txtNombreProducto.Text;
                 }
-
-                if (cbxTallaProducto.Text != "")
+                if (Controladores.FunctionsTools.ValidateTextBox(txtTallaProducto))
                 {
-                    DATA_NUEVO_PRODUCTO.Add(cbxTallaProducto.Text);
-                    DescripcionCompleta += " talla " + cbxTallaProducto.Text;
-                    telaUsada = calculaTelaUsada(cbxTallaProducto.Text);
+                    DATA_NUEVO_PRODUCTO.Add(txtTallaProducto.Text);
                 }
-
 
                 if (cbxTipoMaterial.Text!="")
                 {
-                    string nombreTela = getDataTelaFromCadena(cbxTipoMaterial.Text)[0];
-                    string colorTela = getDataTelaFromCadena(cbxTipoMaterial.Text)[2];
-                    DescripcionCompleta += " de " + nombreTela + " color " + colorTela;
-                    DATA_NUEVO_PRODUCTO.Add(colorTela);
-
-                    idTelaUsada = cnp.getIdTelaForMaquilar(nombreTela, colorTela);
+                    string color = getColorFromCadena(cbxTipoMaterial.Text);
+                    DATA_NUEVO_PRODUCTO.Add(color); 
+                    /*INICIA EL PROCESO DE MAQUILAR*/
 
                 }
 
@@ -175,17 +125,14 @@ namespace TallerCosturaApp
                 
                 cnp.setProducto(DATA_NUEVO_PRODUCTO);
                 MessageBox.Show("Producto agregado con éxito!", "A V I S O");
-                idProductoLastMaquilar = cnp.lastId();
-                ocm.setMaquilar(idTelaUsada, telaUsada, idProductoLastMaquilar);
-                txtDescripcion.Text = DescripcionCompleta;
                 Controladores.FunctionsTools.ClearTextBox(txtNombreProducto);
-                //Controladores.FunctionsTools.ClearTextBox(txtTallaProducto);
+                Controladores.FunctionsTools.ClearTextBox(txtTallaProducto);
                 //Controladores.FunctionsTools.ClearTextBox(txtMaterialProducto);
                 Controladores.FunctionsTools.ClearTextBox(txtModeloProducto);
                 Controladores.FunctionsTools.ClearTextBox(txtDiseñoProducto);
                 Controladores.FunctionsTools.ClearTextBox(txtPrecioProducto);
                 txtNombreProducto.Enabled = false;
-                //txtTallaProducto.Enabled = false;
+                txtTallaProducto.Enabled = false;
                 //txtMaterialProducto.Enabled = false;
                 txtModeloProducto.Enabled = false;
                 txtDiseñoProducto.Enabled = false;
