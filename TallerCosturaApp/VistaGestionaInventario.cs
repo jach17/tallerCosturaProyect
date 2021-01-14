@@ -12,12 +12,14 @@ namespace TallerCosturaApp
 {
     public partial class VistaGestionaInventario : Form
     {
-        CardGestionaProveedor cgp; 
+        CardGestionaProveedor cgp;
+        CardGestionaInventario cgi;
         public VistaGestionaInventario()
         {
             InitializeComponent();
 
             cgp = new CardGestionaProveedor();
+            cgi = new CardGestionaInventario();
 
         }
 
@@ -73,6 +75,18 @@ namespace TallerCosturaApp
                 MessageBox.Show("Nombre del proveedor: " + DATA_PROVEEDOR[0]);
                 cgp.clearData();
             }
+            if (this.contentCards.Controls.Contains(cgi))
+            {
+                string[] DATA_INV = cgi.DATA_INVENTARIO();
+                MessageBox.Show("Nombre de la tela: " + DATA_INV[0]);
+                cgi.clearData();
+            }
+        }
+
+        private void BtnShowInventario_Click(object sender, EventArgs e)
+        {
+            contentCards.Controls.Clear();
+            contentCards.Controls.Add(cgi);
         }
     }
 }

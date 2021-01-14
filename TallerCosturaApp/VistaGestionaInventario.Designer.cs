@@ -45,8 +45,8 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnShowInventario = new System.Windows.Forms.PictureBox();
+            this.btnShowProveedores = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.toolBarApp.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -56,8 +56,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnShowInventario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnShowProveedores)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -217,8 +217,8 @@
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.btnShowInventario);
+            this.panel1.Controls.Add(this.btnShowProveedores);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
@@ -281,34 +281,35 @@
             this.pictureBox4.Image = global::TallerCosturaApp.Properties.Resources.btnAdd;
             this.pictureBox4.Location = new System.Drawing.Point(209, 314);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(98, 31);
+            this.pictureBox4.Size = new System.Drawing.Size(97, 31);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.PictureBox4_Click);
             // 
-            // pictureBox3
+            // btnShowInventario
             // 
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::TallerCosturaApp.Properties.Resources.btnMates;
-            this.pictureBox3.Location = new System.Drawing.Point(4, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(137, 44);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
+            this.btnShowInventario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnShowInventario.Image = global::TallerCosturaApp.Properties.Resources.btnMates;
+            this.btnShowInventario.Location = new System.Drawing.Point(4, 3);
+            this.btnShowInventario.Name = "btnShowInventario";
+            this.btnShowInventario.Size = new System.Drawing.Size(137, 44);
+            this.btnShowInventario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnShowInventario.TabIndex = 2;
+            this.btnShowInventario.TabStop = false;
+            this.btnShowInventario.Click += new System.EventHandler(this.BtnShowInventario_Click);
             // 
-            // pictureBox2
+            // btnShowProveedores
             // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::TallerCosturaApp.Properties.Resources.btnProovs;
-            this.pictureBox2.Location = new System.Drawing.Point(147, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(137, 44);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
+            this.btnShowProveedores.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnShowProveedores.Image = global::TallerCosturaApp.Properties.Resources.btnProovs;
+            this.btnShowProveedores.Location = new System.Drawing.Point(147, 3);
+            this.btnShowProveedores.Name = "btnShowProveedores";
+            this.btnShowProveedores.Size = new System.Drawing.Size(137, 44);
+            this.btnShowProveedores.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnShowProveedores.TabIndex = 1;
+            this.btnShowProveedores.TabStop = false;
+            this.btnShowProveedores.Click += new System.EventHandler(this.PictureBox2_Click);
             // 
             // VistaGestionaInventario
             // 
@@ -331,8 +332,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnShowInventario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnShowProveedores)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -351,10 +352,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox btnShowProveedores;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox btnShowInventario;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Panel contentCards;
