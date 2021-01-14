@@ -7,10 +7,13 @@ using System.Threading.Tasks;
 
 namespace Controladores
 {
-    class ControllerMaquilar
+    public class ControllerMaquilar
     {
         Modelos.ModeloMaquilar omm = new Modelos.ModeloMaquilar();
-        ArrayList DATA_TELAS = new ArrayList();
-        
+        public void setMaquilar(int idTela, int cantidadTela, int idProducto)
+        {
+            omm.setMaquilar(idTela, cantidadTela, idProducto);
+        }
+
     }
 }
