@@ -26,6 +26,10 @@ namespace TallerCosturaApp
         int idProductoLastMaquilar;
         Controladores.ControllerMaquilar ocm;
 
+
+
+        string DescripcionCompleta = "";
+
         public VistaNuevoPedido()
         {
             InitializeComponent();
@@ -133,12 +137,13 @@ namespace TallerCosturaApp
                 if (Controladores.FunctionsTools.ValidateTextBox(txtNombreProducto))
                 {
                     DATA_NUEVO_PRODUCTO.Add(txtNombreProducto.Text);
-                    txtDescripcion.Text = txtNombreProducto.Text;
+                    DescripcionCompleta += txtNombreProducto.Text;
                 }
 
                 if (cbxTallaProducto.Text != "")
                 {
                     DATA_NUEVO_PRODUCTO.Add(cbxTallaProducto.Text);
+                    DescripcionCompleta += " talla " + cbxTallaProducto.Text;
                     telaUsada = calculaTelaUsada(cbxTallaProducto.Text);
                 }
 
@@ -147,7 +152,7 @@ namespace TallerCosturaApp
                 {
                     string nombreTela = getDataTelaFromCadena(cbxTipoMaterial.Text)[0];
                     string colorTela = getDataTelaFromCadena(cbxTipoMaterial.Text)[2];
-                    
+                    DescripcionCompleta += " de " + nombreTela + " color " + colorTela;
                     DATA_NUEVO_PRODUCTO.Add(colorTela);
 
                     idTelaUsada = cnp.getIdTelaForMaquilar(nombreTela, colorTela);
@@ -171,7 +176,8 @@ namespace TallerCosturaApp
                 cnp.setProducto(DATA_NUEVO_PRODUCTO);
                 MessageBox.Show("Producto agregado con éxito!", "A V I S O");
                 idProductoLastMaquilar = cnp.lastId();
-                ocm.setMaquilar(idTelaUsada, telaUsada, idProductoLastMaquilar); 
+                ocm.setMaquilar(idTelaUsada, telaUsada, idProductoLastMaquilar);
+                txtDescripcion.Text = DescripcionCompleta;
                 Controladores.FunctionsTools.ClearTextBox(txtNombreProducto);
                 //Controladores.FunctionsTools.ClearTextBox(txtTallaProducto);
                 //Controladores.FunctionsTools.ClearTextBox(txtMaterialProducto);
