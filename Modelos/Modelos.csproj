@@ -46,6 +46,7 @@
     <Compile Include="ModeloPedidosPendientes.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="ModeloLogin.cs" />
+    <Compile Include="ModeloProveedor.cs" />
     <Compile Include="ModeloTela.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -39,7 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvGestion = new System.Windows.Forms.DataGridView();
             this.contentCards = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -51,7 +51,7 @@
             this.toolBarApp.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGestion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -219,20 +219,21 @@
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.btnShowInventario);
             this.panel1.Controls.Add(this.btnShowProveedores);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dgvGestion);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(621, 342);
             this.panel1.TabIndex = 0;
             // 
-            // dataGridView1
+            // dgvGestion
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 53);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(280, 250);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGestion.Location = new System.Drawing.Point(4, 53);
+            this.dgvGestion.Name = "dgvGestion";
+            this.dgvGestion.Size = new System.Drawing.Size(280, 250);
+            this.dgvGestion.TabIndex = 0;
+            this.dgvGestion.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvGestion_CellContentClick);
             // 
             // contentCards
             // 
@@ -327,7 +328,7 @@
             this.toolBarApp.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGestion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -353,7 +354,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox btnShowProveedores;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvGestion;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox btnShowInventario;
         private System.Windows.Forms.PictureBox pictureBox6;

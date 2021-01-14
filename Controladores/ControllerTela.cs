@@ -14,6 +14,11 @@ namespace Controladores
         ArrayList DATA_TELAS;
         Tela tela;
 
+        public DataTable getGestionInventario()
+        {
+            return omt.getInventario();
+        }
+
         public DataTable getInventario()
         {
             return omt.getInventario();

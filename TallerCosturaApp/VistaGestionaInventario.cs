@@ -14,12 +14,22 @@ namespace TallerCosturaApp
     {
         CardGestionaProveedor cgp;
         CardGestionaInventario cgi;
+        Controladores.ControllerProveedor ocp;
+        Controladores.ControllerTela oct;
+
+
         public VistaGestionaInventario()
         {
             InitializeComponent();
 
             cgp = new CardGestionaProveedor();
             cgi = new CardGestionaInventario();
+            ocp = new Controladores.ControllerProveedor();
+            oct = new Controladores.ControllerTela();
+            this.dgvGestion.DataSource = ocp.getProveedores();
+            contentCards.Controls.Add(cgp);
+
+
 
         }
 
@@ -64,6 +74,9 @@ namespace TallerCosturaApp
 
             contentCards.Controls.Clear();
             contentCards.Controls.Add(cgp);
+            this.dgvGestion.DataSource = ocp.getProveedores();
+            dgvGestion.Refresh();
+
 
         }
 
@@ -87,6 +100,14 @@ namespace TallerCosturaApp
         {
             contentCards.Controls.Clear();
             contentCards.Controls.Add(cgi);
+            this.dgvGestion.DataSource = oct.getGestionInventario();
+            dgvGestion.Refresh();
+
+        }
+
+        private void DgvGestion_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

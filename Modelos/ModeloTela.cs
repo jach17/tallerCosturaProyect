@@ -32,7 +32,18 @@ namespace Modelos
             adaptador.Fill(tabla);
             this.conexion.Close();
             return tabla;
-
+        }
+        public DataTable getGestionInventario()
+        {
+            this.conexion.Open();
+            string query = "SELECT	idTela AS ID, nombreTela AS NOMBRE, colorTela AS COLOR, FROM TELA;";
+            SqlCommand cmd = new SqlCommand(query, this.conexion);
+            SqlDataAdapter adaptador = new SqlDataAdapter();
+            adaptador.SelectCommand = cmd;
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            this.conexion.Close();
+            return tabla;
         }
 
         /*Obtendra el nombre de la tela y el color*/

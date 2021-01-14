@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace Controladores
 {
-    class Proveedor
+    public class Proveedor
     {
-    }
+        public int IdProv {get; set;}
+        public string NombreProv {get; set;}
+        public string ApProv {get; set;}
+        public string AmProv {get; set;}
+        public string RfcProv {get; set;}
+        public string DireccionProv {get; set;}
+        public int NumTelProv {get; set;}
+        public string EmailProv {get; set;}
+
+
+
+     }
 }

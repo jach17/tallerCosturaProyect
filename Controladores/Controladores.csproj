@@ -46,6 +46,7 @@
     <Compile Include="ControllerLogin.cs" />
     <Compile Include="ControllerMaquilar.cs" />
     <Compile Include="ControllerNuevoPedido.cs" />
+    <Compile Include="ControllerProveedor.cs" />
     <Compile Include="ControllerTela.cs" />
     <Compile Include="Pedido.cs" />
     <Compile Include="Producto.cs" />
@@ -53,6 +54,7 @@
     <Compile Include="FunctionsTools.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Proveedor.cs" />
     <Compile Include="Tela.cs" />
   </ItemGroup>
   <ItemGroup>
