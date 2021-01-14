@@ -38,6 +38,13 @@ namespace Controladores
             }
 
         }
+
+        public void inserTela(Tela tela)
+        {
+            omt.insertTela(tela.NombreTela, tela.ColorTela, tela.CantidadExistente, tela.IdProv);
+
+        }
+
         public ArrayList getDataTelas()
         {
             setDataTelas();
