@@ -46,6 +46,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             this.toolBarApp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -103,6 +104,7 @@
             // btnSalir
             // 
             this.btnSalir.AutoSize = true;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Location = new System.Drawing.Point(3, 285);
@@ -116,6 +118,7 @@
             // btnGestionaPedidos
             // 
             this.btnGestionaPedidos.AutoSize = true;
+            this.btnGestionaPedidos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGestionaPedidos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnGestionaPedidos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionaPedidos.Location = new System.Drawing.Point(3, 228);
@@ -143,6 +146,7 @@
             // 
             this.btnVerInventario.AutoSize = true;
             this.btnVerInventario.BackColor = System.Drawing.Color.White;
+            this.btnVerInventario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVerInventario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnVerInventario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerInventario.Location = new System.Drawing.Point(3, 114);
@@ -157,6 +161,7 @@
             // 
             this.btnPedidosPendientes.AutoSize = true;
             this.btnPedidosPendientes.BackColor = System.Drawing.Color.White;
+            this.btnPedidosPendientes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPedidosPendientes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnPedidosPendientes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPedidosPendientes.Location = new System.Drawing.Point(3, 57);
@@ -170,6 +175,7 @@
             // btnNuevoPedido
             // 
             this.btnNuevoPedido.AutoSize = true;
+            this.btnNuevoPedido.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNuevoPedido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnNuevoPedido.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevoPedido.Location = new System.Drawing.Point(3, 0);
@@ -219,6 +225,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.pictureBox4);
@@ -234,7 +241,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::TallerCosturaApp.Properties.Resources.btnDelete;
-            this.pictureBox6.Location = new System.Drawing.Point(450, 288);
+            this.pictureBox6.Location = new System.Drawing.Point(158, 288);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(126, 31);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -244,7 +251,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::TallerCosturaApp.Properties.Resources.btnUpdate;
-            this.pictureBox5.Location = new System.Drawing.Point(220, 288);
+            this.pictureBox5.Location = new System.Drawing.Point(4, 288);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(126, 31);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -254,7 +261,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::TallerCosturaApp.Properties.Resources.btnAdd;
-            this.pictureBox4.Location = new System.Drawing.Point(78, 288);
+            this.pictureBox4.Location = new System.Drawing.Point(464, 288);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(126, 31);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -264,9 +271,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::TallerCosturaApp.Properties.Resources.btnMates;
-            this.pictureBox3.Location = new System.Drawing.Point(78, 10);
+            this.pictureBox3.Location = new System.Drawing.Point(4, 3);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(176, 44);
+            this.pictureBox3.Size = new System.Drawing.Size(137, 44);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
@@ -274,9 +281,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::TallerCosturaApp.Properties.Resources.btnProovs;
-            this.pictureBox2.Location = new System.Drawing.Point(384, 10);
+            this.pictureBox2.Location = new System.Drawing.Point(147, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(175, 44);
+            this.pictureBox2.Size = new System.Drawing.Size(137, 44);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -284,10 +291,17 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(62, 62);
+            this.dataGridView1.Location = new System.Drawing.Point(4, 53);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(514, 220);
+            this.dataGridView1.Size = new System.Drawing.Size(280, 220);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(312, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(290, 270);
+            this.panel2.TabIndex = 6;
             // 
             // VistaGestionaInventario
             // 
@@ -336,5 +350,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Panel panel2;
     }
 }
