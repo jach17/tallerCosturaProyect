@@ -96,6 +96,7 @@
             // btnSalir
             // 
             this.btnSalir.AutoSize = true;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Location = new System.Drawing.Point(3, 285);
@@ -109,6 +110,7 @@
             // btnGestionaPedidos
             // 
             this.btnGestionaPedidos.AutoSize = true;
+            this.btnGestionaPedidos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGestionaPedidos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnGestionaPedidos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionaPedidos.Location = new System.Drawing.Point(3, 228);
@@ -122,6 +124,7 @@
             // btnGestionaInventario
             // 
             this.btnGestionaInventario.AutoSize = true;
+            this.btnGestionaInventario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGestionaInventario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnGestionaInventario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionaInventario.Location = new System.Drawing.Point(3, 171);
@@ -149,6 +152,7 @@
             // 
             this.btnPedidosPendientes.AutoSize = true;
             this.btnPedidosPendientes.BackColor = System.Drawing.Color.White;
+            this.btnPedidosPendientes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPedidosPendientes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnPedidosPendientes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPedidosPendientes.Location = new System.Drawing.Point(3, 57);
@@ -162,6 +166,7 @@
             // btnNuevoPedido
             // 
             this.btnNuevoPedido.AutoSize = true;
+            this.btnNuevoPedido.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNuevoPedido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnNuevoPedido.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevoPedido.Location = new System.Drawing.Point(3, 0);
