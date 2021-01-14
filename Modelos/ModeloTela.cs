@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,19 @@ namespace Modelos
 
         }
 
+        public DataTable getInventario()
+        {
+            this.conexion.Open();
+            string query = "SELECT	idTela AS ID, nombreTela AS NOMBRE, colorTela AS COLOR, cantidadExistente AS EXISTENCIA FROM TELA;";
+            SqlCommand cmd = new SqlCommand(query, this.conexion);
+            SqlDataAdapter adaptador = new SqlDataAdapter();
+            adaptador.SelectCommand = cmd;
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            this.conexion.Close();
+            return tabla;
+
+        }
 
         /*Obtendra el nombre de la tela y el color*/
         public ArrayList getDataTelas()
