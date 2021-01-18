@@ -95,7 +95,9 @@ namespace TallerCosturaApp
                 prov.DireccionProv = DATA_PROVEEDOR[4];
                 prov.NumTelProv= DATA_PROVEEDOR[5];
                 prov.EmailProv = DATA_PROVEEDOR[6];
-
+                ocp.registrarNuevoProveedor(prov);
+                this.dgvGestion.DataSource = ocp.getProveedores();
+                dgvGestion.Refresh();
                 cgp.clearData();
             }
             if (this.contentCards.Controls.Contains(cgi))
@@ -125,6 +127,22 @@ namespace TallerCosturaApp
 
         private void DgvGestion_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void PictureBox5_Click(object sender, EventArgs e)
+        {
+            int rowSelected = dgvGestion.CurrentCell.RowIndex;
+            if (contentCards.Controls.Contains(cgi))
+            {
+                ArrayList DATA_ROW_FROM_GRID = new ArrayList();
+                for (int i=0;i<dgvGestion.Columns.Count;i++)
+                {
+                    DATA_ROW_FROM_GRID.Add(dgvGestion.Rows[rowSelected].Cells[i].Value);
+                }
+
+                cgi.setRowSelected(DATA_ROW_FROM_GRID);
+            }
 
         }
     }

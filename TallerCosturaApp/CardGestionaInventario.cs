@@ -61,6 +61,15 @@ namespace TallerCosturaApp
 
         }
 
+        public void setRowSelected(ArrayList DATA_ROW_SELECTED)
+        {
+            txtNombreTela.Text = DATA_ROW_SELECTED[1].ToString();
+            txtColorTela.Text = DATA_ROW_SELECTED[2].ToString();
+            txtCantidadExistencia.Text = DATA_ROW_SELECTED[3].ToString();
+            cbxProveedor.Text = DATA_ROW_SELECTED[4].ToString();
+
+        }
+
         private void Panel1_Paint(object sender, PaintEventArgs e)
         {
 

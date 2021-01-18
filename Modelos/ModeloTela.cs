@@ -34,8 +34,7 @@ namespace Modelos
         public DataTable getInventario()
         {
             this.conexion.Open();
-            string query = "SELECT	idTela AS ID, nombreTela AS NOMBRE, colorTela AS COLOR, cantidadExistente AS EXISTENCIA FROM TELA;";
-            SqlCommand cmd = new SqlCommand(query, this.conexion);
+            string query = "SELECT	idTela AS ID, nombreTela AS NOMBRE,	colorTela AS COLOR, cantidadExistente AS EXISTENCIA, nombreProv AS PROVEEDOR FROM TELA, PROVEEDOR WHERE TELA.idProv = PROVEEDOR.idProv; ";            SqlCommand cmd = new SqlCommand(query, this.conexion);
             SqlDataAdapter adaptador = new SqlDataAdapter();
             adaptador.SelectCommand = cmd;
             DataTable tabla = new DataTable();
