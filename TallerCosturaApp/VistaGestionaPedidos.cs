@@ -16,12 +16,12 @@ namespace TallerCosturaApp
         {
             InitializeComponent();
 
-             
+             /*
             this.panelContentCardsTodosPedidos.Controls.Add(new CardTodosPedidos("Express"));
             this.panelContentCardsTodosPedidos.Controls.Add(new CardTodosPedidos("Express"));
             this.panelContentCardsTodosPedidos.Controls.Add(new CardTodosPedidos("Normal"));
             this.panelContentCardsTodosPedidos.Controls.Add(new CardTodosPedidos("Normal"));
-
+            */
             this.panelContentCardsVentas.Controls.Add(new CardVentas("Jony"));
             this.panelContentCardsVentas.Controls.Add(new CardVentas("Jony"));
             this.panelContentCardsVentas.Controls.Add(new CardVentas("Jony"));

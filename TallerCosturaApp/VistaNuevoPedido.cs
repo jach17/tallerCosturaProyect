@@ -247,7 +247,7 @@ namespace TallerCosturaApp
                 }
                 DATA_NUEVO_PEDIDO.Add(cnp.lastId());
                 
-                string status = "En construcción";
+                string status = "Sin iniciar";
                 DATA_NUEVO_PEDIDO.Add(status);
                 
                 cnp.setPedido(DATA_NUEVO_PEDIDO);

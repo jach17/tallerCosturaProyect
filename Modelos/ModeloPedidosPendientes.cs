@@ -22,6 +22,28 @@ namespace Modelos
             //this.pedido = new Pedido();
         }
 
+        public ArrayList getAllPedidos()
+        {
+            ArrayList pedidos = new ArrayList();
+            this.conexion.Open();
+            string query = "SELECT * FROM PEDIDO";
+            SqlCommand cmd = new SqlCommand(query, this.conexion);
+            SqlDataReader registro = cmd.ExecuteReader();
+            while (registro.Read())
+            {
+                ArrayList DATA_PEDIDO = new ArrayList();
+                DATA_PEDIDO.Add(registro["descripcionPedido"]);
+                DATA_PEDIDO.Add(registro["nombreCliente"]);
+                DATA_PEDIDO.Add(registro["fechaEntrega"]);
+                DATA_PEDIDO.Add(registro["precioTotal"]);
+                DATA_PEDIDO.Add(registro["tipoPedido"]);
+                DATA_PEDIDO.Add(registro["estatusPedido"]);
+                pedidos.Add(DATA_PEDIDO);
+            }
+            this.conexion.Close();
+            return pedidos;
+        }
+
        public ArrayList getPedidosExpress()
        {
             ArrayList pedidos = new ArrayList();

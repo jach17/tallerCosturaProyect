@@ -14,9 +14,11 @@ namespace Controladores
 
         Pedido pedidoPendienteExpress;
         Pedido pedidoPendienteNormal;
+        Pedido pedidoPendienteAll;
         Modelos.ModeloPedidosPendientes omp = new Modelos.ModeloPedidosPendientes();
         ArrayList pedidosPendientesExpress;
         ArrayList pedidosPendientesNormal;
+        ArrayList pedidosPendientesAll;
 
 
         /*  INICIA PEDIDOS EXPRESS   */
@@ -94,7 +96,29 @@ namespace Controladores
             return this.pedidosPendientesNormal;
         }
 
-        /*  TERMINA PEDIDOS EXPRESS   */
+        /*  TERMINA PEDIDOS NORMAL   */
+
+        /*INICIA TODOS LOS PEDIDOS*/
+
+        public ArrayList gettodosPedidos()
+        {
+            pedidosPendientesAll = new ArrayList();
+            for (int i =0;i< omp.getAllPedidos().Count;i++)
+            {
+                pedidoPendienteAll = new Pedido();
+                ArrayList DATA_PEDIDO = (ArrayList)omp.getAllPedidos()[i];
+                pedidoPendienteAll.metodosDescripcionPedido = DATA_PEDIDO[0].ToString();
+                pedidoPendienteAll.metodosNombreCliente = DATA_PEDIDO[1].ToString();
+                pedidoPendienteAll.metodosFechaEntrega = DATA_PEDIDO[2].ToString();
+                pedidoPendienteAll.metodosPrecioTotal= Convert.ToInt32(DATA_PEDIDO[3]);
+                pedidoPendienteAll.metodosTipoPedido = Convert.ToInt32(DATA_PEDIDO[4]);
+                pedidoPendienteAll.metodosEstatusPedido = DATA_PEDIDO[5].ToString();
+                pedidosPendientesAll.Add(pedidoPendienteAll);
+            }
+
+            return pedidosPendientesAll;
+        }
+        /*TERMINA TODOS LOS PEDIDOS*/
 
 
 
