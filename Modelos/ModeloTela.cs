@@ -25,11 +25,31 @@ namespace Modelos
         public void insertTela(string nombreTela, string colorTela, int cantidadExistencia, int idProv)
         {
             this.conexion.Open();
-            string query = "INSERT INTO TELA VALUES ('"+nombreTela+"', '"+colorTela+"', "+cantidadExistencia+", "+idProv+");";
+            string query = "INSERT INTO TELA VALUES ('" + nombreTela + "', '" + colorTela + "', " + cantidadExistencia + ", " + idProv + ");";
             SqlCommand cmd = new SqlCommand(query, this.conexion);
             cmd.ExecuteNonQuery();
             this.conexion.Close();
         }
+
+        public void deleteTela(int id)
+        {
+            this.conexion.Open();
+            string query = "UPDATE TELA SET cantidadExistente=0  WHERE idTela="+id+";";
+            SqlCommand cmd = new SqlCommand(query, this.conexion);
+            cmd.ExecuteNonQuery();
+            this.conexion.Close();
+        }
+
+
+        public void updateTela(string nombreTela, string colorTela, int cantidadExistencia, int idProv, int idTelaUpdate)
+        {
+            this.conexion.Open();
+            string query = "UPDATE TELA SET nombreTela='"+nombreTela+"', colorTela='"+colorTela+"', cantidadExistente="+cantidadExistencia+", idProv="+idProv+"  WHERE idTela="+idTelaUpdate+";";
+            SqlCommand cmd = new SqlCommand(query, this.conexion);
+            cmd.ExecuteNonQuery();
+            this.conexion.Close();
+        }
+
 
         public DataTable getInventario()
         {

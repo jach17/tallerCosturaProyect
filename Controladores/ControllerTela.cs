@@ -44,6 +44,16 @@ namespace Controladores
             omt.insertTela(tela.NombreTela, tela.ColorTela, tela.CantidadExistente, tela.IdProv);
 
         }
+        public void updateTela(Tela tela)
+        {
+            omt.updateTela(tela.NombreTela, tela.ColorTela, tela.CantidadExistente, tela.IdProv, tela.IdTela);
+
+        }
+
+        public void deleteTela(int id)
+        {
+            omt.deleteTela(id);
+        }
 
         public ArrayList getDataTelas()
         {

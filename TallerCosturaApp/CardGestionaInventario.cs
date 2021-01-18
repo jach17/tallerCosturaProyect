@@ -40,6 +40,7 @@ namespace TallerCosturaApp
             DATA_INV.Add(txtColorTela.Text);
             DATA_INV.Add(txtCantidadExistencia.Text);
             DATA_INV.Add(getIdProveedorFromName());
+            DATA_INV.Add(idTelaUpdate);
             return DATA_INV;
         }
         public int getIdProveedorFromName()
@@ -61,8 +62,10 @@ namespace TallerCosturaApp
 
         }
 
+        int idTelaUpdate = 0;
         public void setRowSelected(ArrayList DATA_ROW_SELECTED)
         {
+            idTelaUpdate = Convert.ToInt32(DATA_ROW_SELECTED[0]);
             txtNombreTela.Text = DATA_ROW_SELECTED[1].ToString();
             txtColorTela.Text = DATA_ROW_SELECTED[2].ToString();
             txtCantidadExistencia.Text = DATA_ROW_SELECTED[3].ToString();

@@ -258,6 +258,7 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 5;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.PictureBox6_Click);
             // 
             // pictureBox5
             // 
@@ -299,7 +300,7 @@
             // 
             this.btnShowProveedores.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShowProveedores.Image = global::TallerCosturaApp.Properties.Resources.btnProovs;
-            this.btnShowProveedores.Location = new System.Drawing.Point(147, 3);
+            this.btnShowProveedores.Location = new System.Drawing.Point(180, 3);
             this.btnShowProveedores.Name = "btnShowProveedores";
             this.btnShowProveedores.Size = new System.Drawing.Size(137, 44);
             this.btnShowProveedores.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -350,7 +351,7 @@
             this.dgvGestion.RowTemplate.Height = 30;
             this.dgvGestion.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvGestion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvGestion.Size = new System.Drawing.Size(280, 250);
+            this.dgvGestion.Size = new System.Drawing.Size(313, 250);
             this.dgvGestion.TabIndex = 0;
             this.dgvGestion.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvGestion_CellClick);
             this.dgvGestion.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvGestion_CellContentClick);

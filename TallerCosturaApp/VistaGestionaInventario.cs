@@ -132,7 +132,21 @@ namespace TallerCosturaApp
 
         private void PictureBox5_Click(object sender, EventArgs e)
         {
-            
+            if (this.contentCards.Controls.Contains(cgi))
+            {
+                ArrayList DATA_INV = cgi.DATA_INVENTARIO();
+                tela = new Controladores.Tela();
+
+                tela.NombreTela = DATA_INV[0].ToString();
+                tela.ColorTela = DATA_INV[1].ToString();
+                tela.CantidadExistente = Convert.ToInt32(DATA_INV[2]);
+                tela.IdProv = Convert.ToInt32(DATA_INV[3]);
+                tela.IdTela = Convert.ToInt32(DATA_INV[4]);
+                oct.updateTela(tela);
+                this.dgvGestion.DataSource = oct.getGestionInventario();
+                dgvGestion.Refresh();
+                cgi.clearData();
+            }
 
         }
 
@@ -148,6 +162,22 @@ namespace TallerCosturaApp
                 }
 
                 cgi.setRowSelected(DATA_ROW_FROM_GRID);
+            }
+        }
+
+        private void PictureBox6_Click(object sender, EventArgs e)
+        {
+            int rowSelected = dgvGestion.CurrentCell.RowIndex;
+            if (contentCards.Controls.Contains(cgi))
+            {
+                int ID_DELETE=0;
+                ID_DELETE= Convert.ToInt32(dgvGestion.Rows[rowSelected].Cells[0].Value);
+
+                oct.deleteTela(ID_DELETE);
+                this.dgvGestion.DataSource = oct.getGestionInventario();
+                dgvGestion.Refresh();
+                cgi.clearData();
+
             }
         }
     }
