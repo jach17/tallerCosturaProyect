@@ -335,8 +335,10 @@
             this.dgvGestion.EnableHeadersVisualStyles = false;
             this.dgvGestion.Location = new System.Drawing.Point(4, 53);
             this.dgvGestion.Name = "dgvGestion";
+            this.dgvGestion.ReadOnly = true;
             this.dgvGestion.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvGestion.RowHeadersVisible = false;
+            this.dgvGestion.RowHeadersWidth = 50;
             this.dgvGestion.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -345,9 +347,12 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvGestion.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvGestion.RowTemplate.Height = 30;
+            this.dgvGestion.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvGestion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvGestion.Size = new System.Drawing.Size(280, 250);
             this.dgvGestion.TabIndex = 0;
+            this.dgvGestion.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvGestion_CellClick);
             this.dgvGestion.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvGestion_CellContentClick);
             // 
             // VistaGestionaInventario

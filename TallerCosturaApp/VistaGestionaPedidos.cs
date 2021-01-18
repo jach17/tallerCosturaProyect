@@ -12,6 +12,7 @@ namespace TallerCosturaApp
 {
     public partial class VistaGestionaPedidos : Form
     {
+        Controladores.Pedido pedido;
         public VistaGestionaPedidos()
         {
             InitializeComponent();
@@ -28,6 +29,7 @@ namespace TallerCosturaApp
 
 
         }
+
 
         private void BtnNuevoPedido_Click(object sender, EventArgs e)
         {

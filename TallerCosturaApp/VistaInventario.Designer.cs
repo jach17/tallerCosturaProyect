@@ -243,6 +243,7 @@
             this.dgvInventario.EnableHeadersVisualStyles = false;
             this.dgvInventario.Location = new System.Drawing.Point(4, 3);
             this.dgvInventario.Name = "dgvInventario";
+            this.dgvInventario.ReadOnly = true;
             this.dgvInventario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
@@ -259,6 +260,9 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvInventario.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvInventario.RowTemplate.Height = 30;
+            this.dgvInventario.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInventario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInventario.Size = new System.Drawing.Size(611, 333);
             this.dgvInventario.TabIndex = 0;
             this.dgvInventario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);

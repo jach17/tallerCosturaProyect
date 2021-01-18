@@ -127,23 +127,28 @@ namespace TallerCosturaApp
 
         private void DgvGestion_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            
         }
 
         private void PictureBox5_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void DgvGestion_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int rowSelected = dgvGestion.CurrentCell.RowIndex;
             if (contentCards.Controls.Contains(cgi))
             {
                 ArrayList DATA_ROW_FROM_GRID = new ArrayList();
-                for (int i=0;i<dgvGestion.Columns.Count;i++)
+                for (int i = 0; i < dgvGestion.Columns.Count; i++)
                 {
                     DATA_ROW_FROM_GRID.Add(dgvGestion.Rows[rowSelected].Cells[i].Value);
                 }
 
                 cgi.setRowSelected(DATA_ROW_FROM_GRID);
             }
-
         }
     }
 }
