@@ -99,6 +99,7 @@
             // btnSalir
             // 
             this.btnSalir.AutoSize = true;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Location = new System.Drawing.Point(3, 285);
@@ -126,6 +127,7 @@
             // 
             this.btnGestionaInventario.AutoSize = true;
             this.btnGestionaInventario.BackColor = System.Drawing.Color.White;
+            this.btnGestionaInventario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGestionaInventario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnGestionaInventario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionaInventario.Location = new System.Drawing.Point(3, 171);
@@ -140,6 +142,7 @@
             // 
             this.btnVerInventario.AutoSize = true;
             this.btnVerInventario.BackColor = System.Drawing.Color.White;
+            this.btnVerInventario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVerInventario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnVerInventario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerInventario.Location = new System.Drawing.Point(3, 114);
@@ -154,6 +157,7 @@
             // 
             this.btnPedidosPendientes.AutoSize = true;
             this.btnPedidosPendientes.BackColor = System.Drawing.Color.White;
+            this.btnPedidosPendientes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPedidosPendientes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnPedidosPendientes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPedidosPendientes.Location = new System.Drawing.Point(3, 57);
@@ -167,6 +171,7 @@
             // btnNuevoPedido
             // 
             this.btnNuevoPedido.AutoSize = true;
+            this.btnNuevoPedido.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNuevoPedido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnNuevoPedido.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevoPedido.Location = new System.Drawing.Point(3, 0);
@@ -235,7 +240,7 @@
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.20468F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 84.79532F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(192, 333);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(192, 345);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // label3
@@ -247,7 +252,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(186, 50);
+            this.label3.Size = new System.Drawing.Size(186, 52);
             this.label3.TabIndex = 0;
             this.label3.Text = "VENTAS";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -258,11 +263,11 @@
             this.panelContentCardsVentas.ColumnCount = 1;
             this.panelContentCardsVentas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.panelContentCardsVentas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContentCardsVentas.Location = new System.Drawing.Point(3, 53);
+            this.panelContentCardsVentas.Location = new System.Drawing.Point(3, 55);
             this.panelContentCardsVentas.Name = "panelContentCardsVentas";
             this.panelContentCardsVentas.RowCount = 1;
             this.panelContentCardsVentas.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.panelContentCardsVentas.Size = new System.Drawing.Size(186, 277);
+            this.panelContentCardsVentas.Size = new System.Drawing.Size(186, 287);
             this.panelContentCardsVentas.TabIndex = 1;
             this.panelContentCardsVentas.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContentCardsVentas_Paint);
             // 
@@ -277,7 +282,7 @@
             this.panelContentPedidos.RowCount = 2;
             this.panelContentPedidos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.20468F));
             this.panelContentPedidos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 84.79532F));
-            this.panelContentPedidos.Size = new System.Drawing.Size(296, 333);
+            this.panelContentPedidos.Size = new System.Drawing.Size(307, 345);
             this.panelContentPedidos.TabIndex = 1;
             // 
             // label2
@@ -289,7 +294,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(290, 50);
+            this.label2.Size = new System.Drawing.Size(301, 52);
             this.label2.TabIndex = 0;
             this.label2.Text = "PEDIDOS";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -300,12 +305,12 @@
             this.panelContentCardsTodosPedidos.ColumnCount = 1;
             this.panelContentCardsTodosPedidos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.panelContentCardsTodosPedidos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContentCardsTodosPedidos.Location = new System.Drawing.Point(3, 53);
+            this.panelContentCardsTodosPedidos.Location = new System.Drawing.Point(3, 55);
             this.panelContentCardsTodosPedidos.Name = "panelContentCardsTodosPedidos";
             this.panelContentCardsTodosPedidos.RowCount = 1;
             this.panelContentCardsTodosPedidos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.panelContentCardsTodosPedidos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.panelContentCardsTodosPedidos.Size = new System.Drawing.Size(290, 277);
+            this.panelContentCardsTodosPedidos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 277F));
+            this.panelContentCardsTodosPedidos.Size = new System.Drawing.Size(301, 287);
             this.panelContentCardsTodosPedidos.TabIndex = 1;
             this.panelContentCardsTodosPedidos.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContentCardsTodosPedidos_Paint);
             // 

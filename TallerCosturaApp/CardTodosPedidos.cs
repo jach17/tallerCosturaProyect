@@ -25,7 +25,7 @@ namespace TallerCosturaApp
             InitializeComponent();
             this.pedido = pedido;
             ESTATUS = new ArrayList();
-            ESTATUS.Add("Iniciar");
+            ESTATUS.Add("Sin iniciar");
             ESTATUS.Add("En construcción");
             ESTATUS.Add("Esperando aprobación");
             ESTATUS.Add("En reconstrucción");
@@ -35,16 +35,21 @@ namespace TallerCosturaApp
             ocpp = new Controladores.ContollerPedidosPendientes();
         }
 
+        int idUpdate=0;
+
 
         public Pedido updatePedido()
         {
             Pedido p = new Pedido();
             p.metodosDescripcionPedido=(txtDescripcion.Text);
-            p.metodosFechaEntrega=(txtFecha.Text);
+            var fechaFormateada = txtFecha.Value;
+            string fecha = fechaFormateada.ToString("yyyy-MM-dd");
+            p.metodosFechaEntrega=(fecha);
             p.metodosNombreCliente=(txtName.Text);
             p.metodosPrecioTotal=Convert.ToInt32(txtPrecio.Text);
             p.metodosEstatusPedido=(cbxStatus.Text);
-            p.metodosTipoPedido=Convert.ToInt32(txtTipo.Text);
+            p.metodosTipoPedido=getTipoPedido(txtTipo.Text);
+            p.metodosIdPedido = this.idUpdate;
 
             return p;
         }
@@ -78,8 +83,20 @@ namespace TallerCosturaApp
             txtPrecio.Text = pedido.metodosPrecioTotal.ToString();
             cbxStatus.Text = pedido.metodosEstatusPedido;
             txtTipo.Text = tipo(Convert.ToInt32(pedido.metodosTipoPedido));
+            this.idUpdate = pedido.metodosIdPedido;
         }
 
+        public int getTipoPedido(string tipo)
+        {
+            if (tipo=="Normal")
+            {
+                return 2;
+            }
+            else
+            {
+                return 1;
+            }
+        }
         
         private void TxtName_TextChanged(object sender, EventArgs e)
         {
@@ -98,8 +115,19 @@ namespace TallerCosturaApp
 
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
+            Pedido p = updatePedido();
+            ocpp.updatePedido(p);
+            MessageBox.Show("Pedido actualizado", "A V I S O");
+        }
 
-            ocpp.updatePedido(updatePedido());
+
+        int idDelete = 0;
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            idDelete = pedido.metodosIdPedido;
+            ocpp.deletePedido(idDelete);
+            MessageBox.Show("Se eliminará el pedido");
         }
     }
 }

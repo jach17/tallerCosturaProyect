@@ -150,6 +150,11 @@ namespace Controladores
                 p.metodosEstatusPedido
             );
         }
+
+        public void deletePedido(int id)
+        {
+            omp.deletePedido(id);
+        }
         /*TERMINA TODOS LOS PEDIDOS*/
 
 

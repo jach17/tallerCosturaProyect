@@ -22,6 +22,15 @@ namespace Modelos
             //this.pedido = new Pedido();
         }
 
+        public void deletePedido(int id)
+        {
+            this.conexion.Open();
+            string query = "DELETE FROM PEDIDO WHERE idPedido="+id+";";
+            SqlCommand cmd = new SqlCommand(query, this.conexion);
+            cmd.ExecuteNonQuery();
+            this.conexion.Close();
+        }
+
         public void updatePedido(
             int idPedido,
             int precioTotal,
