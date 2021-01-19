@@ -302,11 +302,12 @@
             this.panelContentCardsTodosPedidos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContentCardsTodosPedidos.Location = new System.Drawing.Point(3, 53);
             this.panelContentCardsTodosPedidos.Name = "panelContentCardsTodosPedidos";
-            this.panelContentCardsTodosPedidos.RowCount = 2;
+            this.panelContentCardsTodosPedidos.RowCount = 1;
             this.panelContentCardsTodosPedidos.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.panelContentCardsTodosPedidos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.panelContentCardsTodosPedidos.Size = new System.Drawing.Size(290, 277);
             this.panelContentCardsTodosPedidos.TabIndex = 1;
+            this.panelContentCardsTodosPedidos.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContentCardsTodosPedidos_Paint);
             // 
             // VistaGestionaPedidos
             // 

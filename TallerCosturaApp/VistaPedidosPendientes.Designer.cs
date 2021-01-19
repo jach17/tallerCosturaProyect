@@ -269,6 +269,7 @@
             this.panelContentCardsExpress.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.panelContentCardsExpress.Size = new System.Drawing.Size(241, 238);
             this.panelContentCardsExpress.TabIndex = 1;
+            this.panelContentCardsExpress.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContentCardsExpress_Paint);
             // 
             // panel1
             // 

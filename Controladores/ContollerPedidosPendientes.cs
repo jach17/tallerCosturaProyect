@@ -100,22 +100,38 @@ namespace Controladores
 
         /*INICIA TODOS LOS PEDIDOS*/
 
-        public ArrayList gettodosPedidos()
+        public void setPedidosTodos()
         {
             pedidosPendientesAll = new ArrayList();
-            for (int i =0;i< omp.getAllPedidos().Count;i++)
+            for (int i = 0; i < omp.getAllPedidos().Count; i++)
             {
-                pedidoPendienteAll = new Pedido();
-                ArrayList DATA_PEDIDO = (ArrayList)omp.getAllPedidos()[i];
-                pedidoPendienteAll.metodosDescripcionPedido = DATA_PEDIDO[0].ToString();
-                pedidoPendienteAll.metodosNombreCliente = DATA_PEDIDO[1].ToString();
-                pedidoPendienteAll.metodosFechaEntrega = DATA_PEDIDO[2].ToString();
-                pedidoPendienteAll.metodosPrecioTotal= Convert.ToInt32(DATA_PEDIDO[3]);
-                pedidoPendienteAll.metodosTipoPedido = Convert.ToInt32(DATA_PEDIDO[4]);
-                pedidoPendienteAll.metodosEstatusPedido = DATA_PEDIDO[5].ToString();
-                pedidosPendientesAll.Add(pedidoPendienteAll);
-            }
+                //Nueva instancia de un pedido para llenarlo
+                this.pedidoPendienteAll = new Pedido();
 
+                //Obtenemos de lista de arraylists que contienen los datos de los pedidos
+                //los datos de el pedido que indique el contador
+                ArrayList DATA_PEDIDO_ALL= (ArrayList)omp.getAllPedidos()[i];
+
+                //Llenamos nuestra instancia de pedidos con el data list que obtuvimos
+                this.pedidoPendienteAll.metodosIdPedido = Convert.ToInt32(DATA_PEDIDO_ALL[0]);
+                this.pedidoPendienteAll.metodosPrecioTotal = Convert.ToInt32(DATA_PEDIDO_ALL[1]);
+                this.pedidoPendienteAll.metodosTipoPedido = Convert.ToInt32(DATA_PEDIDO_ALL[2]);
+                this.pedidoPendienteAll.metodosIdProducto = Convert.ToInt32(DATA_PEDIDO_ALL[3]);
+                this.pedidoPendienteAll.metodosDescripcionPedido = (string)DATA_PEDIDO_ALL[4];
+                this.pedidoPendienteAll.metodosNombreCliente = (string)DATA_PEDIDO_ALL[5];
+                this.pedidoPendienteAll.metodosFechaEntrega = (string)DATA_PEDIDO_ALL[6];
+                this.pedidoPendienteAll.metodosEstatusPedido = (string)DATA_PEDIDO_ALL[7];
+
+                //Llenamos una lista con objetos de pedidos ya llenos con los registros
+                pedidosPendientesAll.Add(pedidoPendienteAll);
+
+            }
+        }
+
+
+        public ArrayList getTodosPedidos()
+        {
+            setPedidosTodos();
             return pedidosPendientesAll;
         }
         /*TERMINA TODOS LOS PEDIDOS*/

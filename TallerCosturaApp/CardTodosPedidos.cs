@@ -27,7 +27,7 @@ namespace TallerCosturaApp
             ESTATUS.Add("En reconstrucción");
             ESTATUS.Add("Entregado");
             fullStatusCbx(cbxStatus);
-            fullDataPedido(pedido);
+            fullDataPedido();
 
         }
 
@@ -40,14 +40,27 @@ namespace TallerCosturaApp
             }
         }
 
-        public void fullDataPedido(Controladores.Pedido pedido)
+        public string tipo(int t)
+        {
+            if (t == 2)
+            {
+                return "Normal";
+            }
+            else
+            {
+                return "Express";
+            }
+
+        }
+
+        public void fullDataPedido()
         {
             txtDescripcion.Text = pedido.metodosDescripcionPedido;
             txtFecha.Text = pedido.metodosFechaEntrega;
             txtName.Text = pedido.metodosNombreCliente;
             txtPrecio.Text = pedido.metodosPrecioTotal.ToString();
             cbxStatus.Text = pedido.metodosEstatusPedido;
-
+            txtTipo.Text = tipo(Convert.ToInt32(pedido.metodosTipoPedido));
         }
 
         
@@ -64,6 +77,11 @@ namespace TallerCosturaApp
         private void Label6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnUpdate_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

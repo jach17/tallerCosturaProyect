@@ -32,12 +32,25 @@ namespace Modelos
             while (registro.Read())
             {
                 ArrayList DATA_PEDIDO = new ArrayList();
-                DATA_PEDIDO.Add(registro["descripcionPedido"]);
-                DATA_PEDIDO.Add(registro["nombreCliente"]);
-                DATA_PEDIDO.Add(registro["fechaEntrega"]);
-                DATA_PEDIDO.Add(registro["precioTotal"]);
-                DATA_PEDIDO.Add(registro["tipoPedido"]);
-                DATA_PEDIDO.Add(registro["estatusPedido"]);
+
+                int idPedido = Convert.ToInt32(registro["idPedido"]);
+                int precioTotal = Convert.ToInt32(registro["precioTotal"]);
+                int tipoPedido = Convert.ToInt32(registro["tipoPedido"]);
+                int idProducto = Convert.ToInt32(registro["idProducto"]);
+                string descripcionPedido = registro["descripcionPedido"].ToString();
+                string nombreCliente = registro["nombreCliente"].ToString();
+                string fechaEntrega = registro["fechaEntrega"].ToString();
+                string estatusPedido = registro["estatusPedido"].ToString();
+
+                DATA_PEDIDO.Add(idPedido);
+                DATA_PEDIDO.Add(precioTotal);
+                DATA_PEDIDO.Add(tipoPedido);
+                DATA_PEDIDO.Add(idProducto);
+                DATA_PEDIDO.Add(descripcionPedido);
+                DATA_PEDIDO.Add(nombreCliente);
+                DATA_PEDIDO.Add(fechaEntrega);
+                DATA_PEDIDO.Add(estatusPedido);
+
                 pedidos.Add(DATA_PEDIDO);
             }
             this.conexion.Close();

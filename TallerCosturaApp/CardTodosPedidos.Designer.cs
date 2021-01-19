@@ -41,18 +41,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnUpdate = new System.Windows.Forms.PictureBox();
+            this.btnDelete = new System.Windows.Forms.PictureBox();
             this.CardPedPend.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
             this.SuspendLayout();
             // 
             // CardPedPend
             // 
             this.CardPedPend.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.CardPedPend.Controls.Add(this.pictureBox2);
-            this.CardPedPend.Controls.Add(this.pictureBox1);
+            this.CardPedPend.Controls.Add(this.btnDelete);
+            this.CardPedPend.Controls.Add(this.btnUpdate);
             this.CardPedPend.Controls.Add(this.cbxStatus);
             this.CardPedPend.Controls.Add(this.label6);
             this.CardPedPend.Controls.Add(this.txtTipo);
@@ -194,25 +194,26 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Cliente:";
             // 
-            // pictureBox1
+            // btnUpdate
             // 
-            this.pictureBox1.Image = global::TallerCosturaApp.Properties.Resources.btnUpdate;
-            this.pictureBox1.Location = new System.Drawing.Point(23, 240);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 34);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
+            this.btnUpdate.Image = global::TallerCosturaApp.Properties.Resources.btnUpdate;
+            this.btnUpdate.Location = new System.Drawing.Point(23, 240);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(100, 34);
+            this.btnUpdate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnUpdate.TabIndex = 13;
+            this.btnUpdate.TabStop = false;
+            this.btnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
-            // pictureBox2
+            // btnDelete
             // 
-            this.pictureBox2.Image = global::TallerCosturaApp.Properties.Resources.btnDelete;
-            this.pictureBox2.Location = new System.Drawing.Point(160, 239);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 34);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 14;
-            this.pictureBox2.TabStop = false;
+            this.btnDelete.Image = global::TallerCosturaApp.Properties.Resources.btnDelete;
+            this.btnDelete.Location = new System.Drawing.Point(160, 239);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(100, 34);
+            this.btnDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnDelete.TabIndex = 14;
+            this.btnDelete.TabStop = false;
             // 
             // CardTodosPedidos
             // 
@@ -223,8 +224,8 @@
             this.Size = new System.Drawing.Size(290, 277);
             this.CardPedPend.ResumeLayout(false);
             this.CardPedPend.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -244,7 +245,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbxStatus;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox btnDelete;
+        private System.Windows.Forms.PictureBox btnUpdate;
     }
 }
