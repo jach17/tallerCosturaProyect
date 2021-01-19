@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.CardPedPend = new System.Windows.Forms.Panel();
+            this.cbxStatus = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.txtTipo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
@@ -39,14 +41,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cbxStatus = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.CardPedPend.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // CardPedPend
             // 
             this.CardPedPend.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
+            this.CardPedPend.Controls.Add(this.pictureBox2);
+            this.CardPedPend.Controls.Add(this.pictureBox1);
             this.CardPedPend.Controls.Add(this.cbxStatus);
             this.CardPedPend.Controls.Add(this.label6);
             this.CardPedPend.Controls.Add(this.txtTipo);
@@ -62,8 +68,28 @@
             this.CardPedPend.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CardPedPend.Location = new System.Drawing.Point(0, 0);
             this.CardPedPend.Name = "CardPedPend";
-            this.CardPedPend.Size = new System.Drawing.Size(260, 313);
+            this.CardPedPend.Size = new System.Drawing.Size(290, 277);
             this.CardPedPend.TabIndex = 1;
+            // 
+            // cbxStatus
+            // 
+            this.cbxStatus.Font = new System.Drawing.Font("Eras Light ITC", 11.25F);
+            this.cbxStatus.FormattingEnabled = true;
+            this.cbxStatus.Location = new System.Drawing.Point(87, 14);
+            this.cbxStatus.Name = "cbxStatus";
+            this.cbxStatus.Size = new System.Drawing.Size(173, 26);
+            this.cbxStatus.TabIndex = 12;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Eras Demi ITC", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(20, 17);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(61, 18);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Estado:";
+            this.label6.Click += new System.EventHandler(this.Label6_Click);
             // 
             // txtTipo
             // 
@@ -72,7 +98,7 @@
             this.txtTipo.Font = new System.Drawing.Font("Eras Light ITC", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTipo.Location = new System.Drawing.Point(87, 46);
             this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(147, 18);
+            this.txtTipo.Size = new System.Drawing.Size(173, 18);
             this.txtTipo.TabIndex = 10;
             this.txtTipo.TextChanged += new System.EventHandler(this.TxtTipo_TextChanged);
             // 
@@ -94,7 +120,7 @@
             this.txtDescripcion.Location = new System.Drawing.Point(22, 186);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(212, 101);
+            this.txtDescripcion.Size = new System.Drawing.Size(238, 47);
             this.txtDescripcion.TabIndex = 8;
             // 
             // txtPrecio
@@ -104,7 +130,7 @@
             this.txtPrecio.Font = new System.Drawing.Font("Eras Light ITC", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrecio.Location = new System.Drawing.Point(80, 144);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(154, 18);
+            this.txtPrecio.Size = new System.Drawing.Size(180, 18);
             this.txtPrecio.TabIndex = 7;
             // 
             // txtFecha
@@ -114,7 +140,7 @@
             this.txtFecha.Font = new System.Drawing.Font("Eras Light ITC", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFecha.Location = new System.Drawing.Point(22, 116);
             this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(212, 18);
+            this.txtFecha.Size = new System.Drawing.Size(238, 18);
             this.txtFecha.TabIndex = 6;
             // 
             // txtName
@@ -124,7 +150,7 @@
             this.txtName.Font = new System.Drawing.Font("Eras Light ITC", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(87, 74);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(147, 18);
+            this.txtName.Size = new System.Drawing.Size(173, 18);
             this.txtName.TabIndex = 5;
             this.txtName.TextChanged += new System.EventHandler(this.TxtName_TextChanged);
             // 
@@ -168,25 +194,25 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Cliente:";
             // 
-            // label6
+            // pictureBox1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Eras Demi ITC", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(20, 17);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 18);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Estado:";
-            this.label6.Click += new System.EventHandler(this.Label6_Click);
+            this.pictureBox1.Image = global::TallerCosturaApp.Properties.Resources.btnUpdate;
+            this.pictureBox1.Location = new System.Drawing.Point(23, 240);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 34);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
             // 
-            // cbxStatus
+            // pictureBox2
             // 
-            this.cbxStatus.Font = new System.Drawing.Font("Eras Light ITC", 11.25F);
-            this.cbxStatus.FormattingEnabled = true;
-            this.cbxStatus.Location = new System.Drawing.Point(87, 14);
-            this.cbxStatus.Name = "cbxStatus";
-            this.cbxStatus.Size = new System.Drawing.Size(147, 26);
-            this.cbxStatus.TabIndex = 12;
+            this.pictureBox2.Image = global::TallerCosturaApp.Properties.Resources.btnDelete;
+            this.pictureBox2.Location = new System.Drawing.Point(160, 239);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 34);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
             // 
             // CardTodosPedidos
             // 
@@ -194,9 +220,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.CardPedPend);
             this.Name = "CardTodosPedidos";
-            this.Size = new System.Drawing.Size(260, 313);
+            this.Size = new System.Drawing.Size(290, 277);
             this.CardPedPend.ResumeLayout(false);
             this.CardPedPend.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -216,5 +244,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbxStatus;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
