@@ -18,6 +18,7 @@ namespace TallerCosturaApp
         Controladores.ControllerProveedor ocp;
         Controladores.ControllerTela oct;
         Controladores.Tela tela;
+        Controladores.Proveedor proveedor;
 
 
         public VistaGestionaInventario()
@@ -87,15 +88,15 @@ namespace TallerCosturaApp
             if (this.contentCards.Controls.Contains(cgp))
             {
                 Controladores.Proveedor prov = new Controladores.Proveedor();
-                string[] DATA_PROVEEDOR = cgp.DATA_PROVEEDOR();
-                prov.NombreProv = DATA_PROVEEDOR[0];
-                prov.ApProv = DATA_PROVEEDOR[1];
-                prov.AmProv= DATA_PROVEEDOR[2];
-                prov.RfcProv = DATA_PROVEEDOR[3];
-                prov.DireccionProv = DATA_PROVEEDOR[4];
-                prov.NumTelProv= DATA_PROVEEDOR[5];
-                prov.EmailProv = DATA_PROVEEDOR[6];
-                ocp.registrarNuevoProveedor(prov);
+                ArrayList DATA_PROVEEDOR = cgp.DATA_PROVEEDOR();
+                prov.NombreProv = DATA_PROVEEDOR[0].ToString();
+                prov.ApProv = DATA_PROVEEDOR[1].ToString();
+                prov.AmProv= DATA_PROVEEDOR[2].ToString();
+                prov.RfcProv = DATA_PROVEEDOR[3].ToString();
+                prov.DireccionProv = DATA_PROVEEDOR[4].ToString();
+                prov.NumTelProv= DATA_PROVEEDOR[5].ToString();
+                prov.EmailProv = DATA_PROVEEDOR[6].ToString();
+                ocp.registrarNuevoProveedor(prov); 
                 this.dgvGestion.DataSource = ocp.getProveedores();
                 dgvGestion.Refresh();
                 cgp.clearData();
@@ -147,7 +148,23 @@ namespace TallerCosturaApp
                 dgvGestion.Refresh();
                 cgi.clearData();
             }
-
+            if (this.contentCards.Controls.Contains(cgp))
+            {
+                ArrayList DATA_PROVEEDOR = cgp.DATA_PROVEEDOR(); 
+                proveedor= new Controladores.Proveedor();
+                proveedor.NombreProv = DATA_PROVEEDOR[0].ToString();
+                proveedor.ApProv = DATA_PROVEEDOR[1].ToString();
+                proveedor.AmProv = DATA_PROVEEDOR[2].ToString();
+                proveedor.RfcProv = DATA_PROVEEDOR[3].ToString();
+                proveedor.DireccionProv = DATA_PROVEEDOR[4].ToString();
+                proveedor.NumTelProv = DATA_PROVEEDOR[5].ToString();
+                proveedor.EmailProv = DATA_PROVEEDOR[6].ToString();
+                proveedor.IdProv = Convert.ToInt32(DATA_PROVEEDOR[7]);
+                ocp.updateProveedor(proveedor);
+                this.dgvGestion.DataSource = ocp.getProveedores();
+                dgvGestion.Refresh();
+                cgp.clearData();
+            }
         }
 
         private void DgvGestion_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -163,6 +180,16 @@ namespace TallerCosturaApp
 
                 cgi.setRowSelected(DATA_ROW_FROM_GRID);
             }
+            if (contentCards.Controls.Contains(cgp))
+            {
+                ArrayList DATA_ROW_FROM_GRID = new ArrayList();
+                for (int i = 0; i < dgvGestion.Columns.Count; i++)
+                {
+                    DATA_ROW_FROM_GRID.Add(dgvGestion.Rows[rowSelected].Cells[i].Value);
+                }
+
+                cgp.setRowSelected(DATA_ROW_FROM_GRID);
+            }
         }
 
         private void PictureBox6_Click(object sender, EventArgs e)
@@ -177,6 +204,17 @@ namespace TallerCosturaApp
                 this.dgvGestion.DataSource = oct.getGestionInventario();
                 dgvGestion.Refresh();
                 cgi.clearData();
+
+            }
+            if (contentCards.Controls.Contains(cgp))
+            {
+                int ID_DELETE = 0;
+                ID_DELETE = Convert.ToInt32(dgvGestion.Rows[rowSelected].Cells[0].Value);
+
+                ocp.deleteProveedor(ID_DELETE);
+                this.dgvGestion.DataSource = ocp.getProveedores();
+                dgvGestion.Refresh();
+                cgp.clearData();
 
             }
         }

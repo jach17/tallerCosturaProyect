@@ -27,6 +27,16 @@ namespace Controladores
             return LISTA_PROVEEDORES;
         }
 
+        public void updateProveedor(Proveedor prov)
+        {
+            omp.updateProveedor(prov.NombreProv, prov.ApProv, prov.AmProv, prov.RfcProv, prov.DireccionProv, prov.NumTelProv, prov.EmailProv, prov.IdProv);
+        }
+
+        public void deleteProveedor(int id)
+        {
+            omp.deleteProveedor(id);
+        }
+
         public int getIdProveedorFromNombre(string name)
         {
             return omp.getIdProveedorFromNombre(name);
@@ -35,8 +45,7 @@ namespace Controladores
 
         public void registrarNuevoProveedor(Proveedor prov)
         {
-            omp.registrarNuevoProveedor(
-                prov.NombreProv, prov.ApProv, prov.AmProv, prov.RfcProv, prov.DireccionProv, prov.NumTelProv, prov.EmailProv);
+            omp.registrarNuevoProveedor(prov.NombreProv, prov.ApProv, prov.AmProv, prov.RfcProv, prov.DireccionProv, prov.NumTelProv, prov.EmailProv);
 
                 
 

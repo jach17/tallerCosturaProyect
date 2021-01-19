@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace TallerCosturaApp
 {
@@ -17,17 +18,17 @@ namespace TallerCosturaApp
         {
             InitializeComponent();
         }
-        public string[] DATA_PROVEEDOR()
+        public ArrayList DATA_PROVEEDOR()
         {
-            string[] DATA_PROOV= new string[7];
-            DATA_PROOV[0] = txtName.Text;
-            DATA_PROOV[1] = txtApPat.Text;
-            DATA_PROOV[2] = txtApMat.Text;
-            DATA_PROOV[3] = txtRFC.Text;
-            DATA_PROOV[4] = txtDireccion.Text;
-            DATA_PROOV[5] = txtNumTel.Text;
-            DATA_PROOV[6] = txtEmail.Text;
-
+            ArrayList DATA_PROOV= new ArrayList();
+            DATA_PROOV.Add(txtName.Text);
+            DATA_PROOV.Add(txtApPat.Text);
+            DATA_PROOV.Add(txtApMat.Text);
+            DATA_PROOV.Add(txtRFC.Text);
+            DATA_PROOV.Add(txtDireccion.Text);
+            DATA_PROOV.Add(txtNumTel.Text);
+            DATA_PROOV.Add(txtEmail.Text);
+            DATA_PROOV.Add(this.idUpdate);
             return DATA_PROOV;
 
         }
@@ -42,6 +43,20 @@ namespace TallerCosturaApp
             txtNumTel.Text="";
             txtEmail.Text="";
 
+        }
+
+        int idUpdate=0;
+
+        public void setRowSelected(ArrayList DATA_PROVEEDOR)
+        {
+            idUpdate = Convert.ToInt32(DATA_PROVEEDOR[0]);
+            txtName.Text = DATA_PROVEEDOR[1].ToString();
+            txtApPat.Text = DATA_PROVEEDOR[2].ToString();
+            txtApMat.Text = DATA_PROVEEDOR[3].ToString();
+            txtRFC.Text = DATA_PROVEEDOR[4].ToString();
+            txtDireccion.Text = DATA_PROVEEDOR[5].ToString();
+            txtNumTel.Text = DATA_PROVEEDOR[6].ToString();
+            txtEmail.Text = DATA_PROVEEDOR[7].ToString();
         }
 
         private void TxtName_TextChanged(object sender, EventArgs e)

@@ -52,11 +52,28 @@ namespace Modelos
             cmd.ExecuteNonQuery();
             this.conexion.Close();
         }
+        public void updateProveedor(
+            string nombreProv,
+            string apProv,
+            string amProv,
+            string rfcProv,
+            string direccionProv,
+            string numTelProv,
+            string emailProv,
+            int idUpdate
+            )
+        {
+            this.conexion.Open();
+            string query = "UPDATE PROVEEDOR SET nombreProv = '"+nombreProv+"', apProv = '"+apProv+"', amProv = '"+amProv+"', rfcProv = '"+rfcProv+"', direccionProv = '"+direccionProv+"', numTelProv = '"+numTelProv+"', emailProv = '"+emailProv+"' WHERE idProv = "+idUpdate+"; ";
+            SqlCommand cmd = new SqlCommand(query, this.conexion);
+            cmd.ExecuteNonQuery();
+            this.conexion.Close();
+        }
 
         public DataTable getProveedores()
         {
             this.conexion.Open();
-            string query = "SELECT	idProv AS Id, nombreProv AS Nombre, apProv AS Apellido, rfcProv AS RFC, direccionProv AS Direccion, numTelProv AS Celular, emailProv AS Email FROM PROVEEDOR;";
+            string query = "SELECT	idProv AS Id, nombreProv AS Nombre, apProv AS ApellidoP, amProv as ApellidoM, rfcProv AS RFC, direccionProv AS Direccion, numTelProv AS Celular, emailProv AS Email FROM PROVEEDOR;";
             SqlCommand cmd = new SqlCommand(query, this.conexion);
             SqlDataAdapter adaptador = new SqlDataAdapter();
             adaptador.SelectCommand = cmd;
@@ -78,6 +95,14 @@ namespace Modelos
             }
             this.conexion.Close();
             return LISTA_PROVEEDORES;
+        }
+        public void deleteProveedor(int id)
+        {
+            this.conexion.Open();
+            string query = "DELETE FROM PROVEEDOR WHERE idProv=" + id + ";";
+            SqlCommand cmd = new SqlCommand(query, this.conexion);
+            cmd.ExecuteNonQuery();
+            this.conexion.Close();
         }
     }
 }

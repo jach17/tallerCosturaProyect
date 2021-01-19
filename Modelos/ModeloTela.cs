@@ -34,7 +34,7 @@ namespace Modelos
         public void deleteTela(int id)
         {
             this.conexion.Open();
-            string query = "UPDATE TELA SET cantidadExistente=0  WHERE idTela="+id+";";
+            string query = "DELETE FROM TELA WHERE idTela="+id+";";
             SqlCommand cmd = new SqlCommand(query, this.conexion);
             cmd.ExecuteNonQuery();
             this.conexion.Close();
