@@ -8,14 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
+using Controladores;
 
 namespace TallerCosturaApp
 {
     public partial class CardTodosPedidos : UserControl
     {
         Controladores.Pedido pedido;
+        Controladores.ContollerPedidosPendientes ocpp;
+
 
         ArrayList ESTATUS;
+        
         public CardTodosPedidos(Controladores.Pedido pedido)
         {
             InitializeComponent();
@@ -28,10 +32,23 @@ namespace TallerCosturaApp
             ESTATUS.Add("Entregado");
             fullStatusCbx(cbxStatus);
             fullDataPedido();
-
+            ocpp = new Controladores.ContollerPedidosPendientes();
         }
 
-     
+
+        public Pedido updatePedido()
+        {
+            Pedido p = new Pedido();
+            p.metodosDescripcionPedido=(txtDescripcion.Text);
+            p.metodosFechaEntrega=(txtFecha.Text);
+            p.metodosNombreCliente=(txtName.Text);
+            p.metodosPrecioTotal=Convert.ToInt32(txtPrecio.Text);
+            p.metodosEstatusPedido=(cbxStatus.Text);
+            p.metodosTipoPedido=Convert.ToInt32(txtTipo.Text);
+
+            return p;
+        }
+
         public void fullStatusCbx(ComboBox cbx)
         {
             for (int i=0; i<this.ESTATUS.Count; i++)
@@ -81,7 +98,8 @@ namespace TallerCosturaApp
 
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
-           
+
+            ocpp.updatePedido(updatePedido());
         }
     }
 }

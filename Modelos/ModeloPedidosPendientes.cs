@@ -22,6 +22,31 @@ namespace Modelos
             //this.pedido = new Pedido();
         }
 
+        public void updatePedido(
+            int idPedido,
+            int precioTotal,
+            int tipoPedido,
+            string descripcionPedido,
+            string nombreCliente,
+            string fechaEntrega,
+            string estatusPedido
+            )
+        {
+            this.conexion.Open();
+            string query =  "UPDATE PEDIDO SET " +
+                            "descripcionPedido = '"+descripcionPedido+"'," +
+                            "nombreCliente = '"+nombreCliente+"'," +
+                            "fechaEntrega = '"+fechaEntrega+"'," +
+                            "precioTotal = '"+precioTotal+"'," +
+                            "tipoPedido = '"+tipoPedido+"'," +
+                            "estatusPedido = '"+estatusPedido+"'" +
+                            "WHERE idPedido = "+idPedido+";";
+            SqlCommand cmd = new SqlCommand(query, this.conexion);
+            cmd.ExecuteNonQuery();
+            this.conexion.Close();
+        }
+
+
         public ArrayList getAllPedidos()
         {
             ArrayList pedidos = new ArrayList();

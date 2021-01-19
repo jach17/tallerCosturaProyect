@@ -21,6 +21,9 @@ namespace Controladores
         ArrayList pedidosPendientesAll;
 
 
+
+
+
         /*  INICIA PEDIDOS EXPRESS   */
 
         public void setPedidosExpress()
@@ -133,6 +136,19 @@ namespace Controladores
         {
             setPedidosTodos();
             return pedidosPendientesAll;
+        }
+
+        public void updatePedido(Pedido p)
+        {
+            omp.updatePedido(
+                p.metodosIdPedido,
+                p.metodosPrecioTotal,
+                p.metodosTipoPedido,
+                p.metodosDescripcionPedido,
+                p.metodosNombreCliente,
+                p.metodosFechaEntrega,
+                p.metodosEstatusPedido
+            );
         }
         /*TERMINA TODOS LOS PEDIDOS*/
 
