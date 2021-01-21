@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnDeleteVenta = new System.Windows.Forms.PictureBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtMonto = new System.Windows.Forms.TextBox();
+            this.txtFecha = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnDeleteVenta = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnDeleteVenta)).BeginInit();
             this.SuspendLayout();
@@ -45,10 +45,10 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.btnDeleteVenta);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.txtName);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtDescripcion);
+            this.panel1.Controls.Add(this.txtNombre);
+            this.panel1.Controls.Add(this.txtMonto);
+            this.panel1.Controls.Add(this.txtFecha);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -60,42 +60,55 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
-            // textBox4
+            // btnDeleteVenta
             // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Font = new System.Drawing.Font("Eras Demi ITC", 9.75F);
-            this.textBox4.Location = new System.Drawing.Point(19, 152);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(138, 57);
-            this.textBox4.TabIndex = 7;
+            this.btnDeleteVenta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeleteVenta.Image = global::TallerCosturaApp.Properties.Resources.btnDelete;
+            this.btnDeleteVenta.Location = new System.Drawing.Point(19, 225);
+            this.btnDeleteVenta.Name = "btnDeleteVenta";
+            this.btnDeleteVenta.Size = new System.Drawing.Size(138, 33);
+            this.btnDeleteVenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnDeleteVenta.TabIndex = 8;
+            this.btnDeleteVenta.TabStop = false;
+            this.btnDeleteVenta.Click += new System.EventHandler(this.BtnDeleteVenta_Click);
             // 
-            // txtName
+            // txtDescripcion
             // 
-            this.txtName.Enabled = false;
-            this.txtName.Font = new System.Drawing.Font("Eras Demi ITC", 9.75F);
-            this.txtName.Location = new System.Drawing.Point(19, 28);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(138, 22);
-            this.txtName.TabIndex = 6;
+            this.txtDescripcion.Enabled = false;
+            this.txtDescripcion.Font = new System.Drawing.Font("Eras Demi ITC", 9.75F);
+            this.txtDescripcion.Location = new System.Drawing.Point(19, 152);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(138, 57);
+            this.txtDescripcion.TabIndex = 7;
+            this.txtDescripcion.TextChanged += new System.EventHandler(this.TextBox4_TextChanged);
             // 
-            // textBox2
+            // txtNombre
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Font = new System.Drawing.Font("Eras Demi ITC", 9.75F);
-            this.textBox2.Location = new System.Drawing.Point(19, 110);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(138, 22);
-            this.textBox2.TabIndex = 5;
+            this.txtNombre.Enabled = false;
+            this.txtNombre.Font = new System.Drawing.Font("Eras Demi ITC", 9.75F);
+            this.txtNombre.Location = new System.Drawing.Point(19, 28);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(138, 22);
+            this.txtNombre.TabIndex = 6;
             // 
-            // textBox1
+            // txtMonto
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Eras Demi ITC", 9.75F);
-            this.textBox1.Location = new System.Drawing.Point(19, 67);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(138, 22);
-            this.textBox1.TabIndex = 4;
+            this.txtMonto.Enabled = false;
+            this.txtMonto.Font = new System.Drawing.Font("Eras Demi ITC", 9.75F);
+            this.txtMonto.Location = new System.Drawing.Point(19, 110);
+            this.txtMonto.Name = "txtMonto";
+            this.txtMonto.Size = new System.Drawing.Size(138, 22);
+            this.txtMonto.TabIndex = 5;
+            // 
+            // txtFecha
+            // 
+            this.txtFecha.Enabled = false;
+            this.txtFecha.Font = new System.Drawing.Font("Eras Demi ITC", 9.75F);
+            this.txtFecha.Location = new System.Drawing.Point(19, 67);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(138, 22);
+            this.txtFecha.TabIndex = 4;
             // 
             // label4
             // 
@@ -137,16 +150,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Fecha de la venta:";
             // 
-            // btnDeleteVenta
-            // 
-            this.btnDeleteVenta.Image = global::TallerCosturaApp.Properties.Resources.btnDelete;
-            this.btnDeleteVenta.Location = new System.Drawing.Point(19, 225);
-            this.btnDeleteVenta.Name = "btnDeleteVenta";
-            this.btnDeleteVenta.Size = new System.Drawing.Size(138, 33);
-            this.btnDeleteVenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnDeleteVenta.TabIndex = 8;
-            this.btnDeleteVenta.TabStop = false;
-            // 
             // CardVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -165,13 +168,13 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox btnDeleteVenta;
+        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtMonto;
+        private System.Windows.Forms.TextBox txtFecha;
     }
 }

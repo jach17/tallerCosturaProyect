@@ -115,7 +115,16 @@ namespace TallerCosturaApp
 
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
+
+           
+
             Pedido p = updatePedido();
+
+            if (p.metodosEstatusPedido=="Entregado")
+            {
+                ocpp.fromPendientesToVentas(p.metodosDescripcionPedido,p.metodosFechaEntrega, p.metodosNombreCliente, p.metodosIdPedido, p.metodosPrecioTotal);
+            }
+
             ocpp.updatePedido(p);
             MessageBox.Show("Pedido actualizado", "A V I S O");
         }

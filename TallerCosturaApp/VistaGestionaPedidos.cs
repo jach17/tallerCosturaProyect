@@ -22,7 +22,8 @@ namespace TallerCosturaApp
             ocpp = new Controladores.ContollerPedidosPendientes();
             PEDIDOS_ALL = new ArrayList();
             PEDIDOS_ALL = ocpp.getTodosPedidos();
-           // VENTAS
+            VENTAS = new ArrayList();
+            VENTAS = ocpp.getVentas();
             /*
            this.panelContentCardsTodosPedidos.Controls.Add(new CardTodosPedidos("Express"));
            this.panelContentCardsTodosPedidos.Controls.Add(new CardTodosPedidos("Express"));
@@ -35,12 +36,19 @@ namespace TallerCosturaApp
             this.panelContentCardsVentas.Controls.Add(new CardVentas("Jony"));
             */
             createAllCards();
+            createVentasCards();
 
         }
 
         public void createVentasCards()
         {
-
+            for (int i=0;i<VENTAS.Count;i++)
+            {
+                Controladores.Venta v;
+                v = (Controladores.Venta)VENTAS[i];
+                CardVentas card = new CardVentas(v);
+                this.panelContentCardsVentas.Controls.Add(card);
+            }
         }
 
         public void createAllCards()

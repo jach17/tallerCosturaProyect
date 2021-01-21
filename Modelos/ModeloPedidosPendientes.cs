@@ -60,7 +60,7 @@ namespace Modelos
         {
             ArrayList pedidos = new ArrayList();
             this.conexion.Open();
-            string query = "SELECT * FROM PEDIDO";
+            string query = "SELECT * FROM PEDIDO WHERE estatusPedido!='Entregado'";
             SqlCommand cmd = new SqlCommand(query, this.conexion);
             SqlDataReader registro = cmd.ExecuteReader();
             while (registro.Read())
@@ -95,7 +95,7 @@ namespace Modelos
        {
             ArrayList pedidos = new ArrayList();
             this.conexion.Open();
-            string query = "SELECT * FROM PEDIDO WHERE tipoPedido=1 ORDER BY idPedido DESC;";
+            string query = "SELECT * FROM PEDIDO WHERE tipoPedido=1 AND estatusPedido!='Entregado' ORDER BY idPedido DESC ;";
             SqlCommand cmd = new SqlCommand(query, this.conexion);
             SqlDataReader registro = cmd.ExecuteReader();
             while (registro.Read())
@@ -134,7 +134,7 @@ namespace Modelos
         {
             ArrayList pedidos = new ArrayList();
             this.conexion.Open();
-            string query = "SELECT * FROM PEDIDO WHERE tipoPedido=2 ORDER BY idPedido DESC;";
+            string query = "SELECT * FROM PEDIDO WHERE tipoPedido=2 AND estatusPedido!='Entregado' ORDER BY idPedido DESC ;";
             SqlCommand cmd = new SqlCommand(query, this.conexion);
             SqlDataReader registro = cmd.ExecuteReader();
             while (registro.Read())

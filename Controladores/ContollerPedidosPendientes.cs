@@ -20,8 +20,7 @@ namespace Controladores
         ArrayList pedidosPendientesNormal;
         ArrayList pedidosPendientesAll;
 
-
-
+       
 
 
         /*  INICIA PEDIDOS EXPRESS   */
@@ -157,7 +156,45 @@ namespace Controladores
         }
         /*TERMINA TODOS LOS PEDIDOS*/
 
+        Modelos.ModeloNuevoPedido mnp = new Modelos.ModeloNuevoPedido();
 
+        public void fromPendientesToVentas(
+            string descripcionPedido,
+            string fecgaEntrega,
+            string nombreCliente,
+            int idPedido,
+            int precioTotal
+            )
+        {
+            mnp.fromPendienteToVentas(descripcionPedido, fecgaEntrega, nombreCliente, idPedido, precioTotal);
+        }
+        public ArrayList getVentas()
+        {
+            return setVentas(mnp.getVentas());
+        }
+        public ArrayList setVentas(ArrayList VENTAS)
+        {
+            ArrayList VENTAS_LIST= new ArrayList();
+            for (int i=0;i<VENTAS.Count;i++)
+            {
+                ArrayList VENTAS_DATA = (ArrayList)VENTAS[i];
+                Venta v = new Venta();
+                v.idVenta = Convert.ToInt32(VENTAS_DATA[0]);
+                v.descripcionPedido = VENTAS_DATA[1].ToString(); 
+                v.fechaVenta = VENTAS_DATA[2].ToString();
+                v.nombreCliente = VENTAS_DATA[3].ToString();
+                v.idPedido = Convert.ToInt32(VENTAS_DATA[4]);
+                v.precioTotal = Convert.ToInt32(VENTAS_DATA[4]);
 
+                VENTAS_LIST.Add(v);
+            }
+            return VENTAS_LIST;
+        }
+
+        
+        public void deleteVenta(int id)
+        {
+            mnp.deleteVenta(id);
+        }
     }
 }

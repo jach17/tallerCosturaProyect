@@ -77,5 +77,6 @@ namespace Controladores
             return mnp.getIdTelaForMaquilar(nombreTela, colorTela);
         }
 
+        
     }
 }

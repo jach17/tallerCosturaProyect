@@ -235,12 +235,12 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.panelContentCardsVentas, 0, 1);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(403, 3);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(374, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.20468F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 84.79532F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(192, 345);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(221, 345);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // label3
@@ -252,7 +252,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(186, 52);
+            this.label3.Size = new System.Drawing.Size(215, 52);
             this.label3.TabIndex = 0;
             this.label3.Text = "VENTAS";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -267,7 +267,7 @@
             this.panelContentCardsVentas.Name = "panelContentCardsVentas";
             this.panelContentCardsVentas.RowCount = 1;
             this.panelContentCardsVentas.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.panelContentCardsVentas.Size = new System.Drawing.Size(186, 287);
+            this.panelContentCardsVentas.Size = new System.Drawing.Size(215, 287);
             this.panelContentCardsVentas.TabIndex = 1;
             this.panelContentCardsVentas.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContentCardsVentas_Paint);
             // 
@@ -309,7 +309,7 @@
             this.panelContentCardsTodosPedidos.Name = "panelContentCardsTodosPedidos";
             this.panelContentCardsTodosPedidos.RowCount = 1;
             this.panelContentCardsTodosPedidos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.panelContentCardsTodosPedidos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 277F));
+            this.panelContentCardsTodosPedidos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 287F));
             this.panelContentCardsTodosPedidos.Size = new System.Drawing.Size(301, 287);
             this.panelContentCardsTodosPedidos.TabIndex = 1;
             this.panelContentCardsTodosPedidos.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContentCardsTodosPedidos_Paint);

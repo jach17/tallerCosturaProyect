@@ -20,17 +20,31 @@ namespace Modelos
             this.conexion = c.getConexion();
         }
 
-        public void fromPendienteToVentas()
+        public void deleteVenta(int id)
         {
             this.conexion.Open();
-            string query = "INSERT INTO VENTA" +
-                                "SELECT descripcionPedido, " +
-                                        "fechaEntrega, " +
-                                        "nombreCliente, " +
-                                        "idPedido, " +
-                                        "precioTotal" +
-                                 "FROM PEDIDO" +
-                                 "WHERE estatusPedido = 'Entregado'";
+            string query= " DELETE FROM VENTA WHERE idVenta="+id;
+            SqlCommand cmd = new SqlCommand(query, this.conexion);
+            cmd.ExecuteNonQuery();
+
+            this.conexion.Close();
+        }
+
+        public void fromPendienteToVentas(
+            string descripcionPedido,
+            string fecgaEntrega,
+            string nombreCliente,
+            int idPedido,
+            int precioTotal
+            )
+        {
+            this.conexion.Open();
+            string query = "INSERT INTO VENTA VALUES (" +
+                                "'" + descripcionPedido + "'," +
+                                "'" + fecgaEntrega + "'," +
+                                "'" + nombreCliente + "'," +
+                                "'" + idPedido + "'," +
+                                "'" + precioTotal + "')";
             SqlCommand cmd = new SqlCommand(query, this.conexion);
             cmd.ExecuteNonQuery();
             this.conexion.Close();

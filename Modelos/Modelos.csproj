@@ -48,7 +48,6 @@
     <Compile Include="ModeloLogin.cs" />
     <Compile Include="ModeloProveedor.cs" />
     <Compile Include="ModeloTela.cs" />
-    <Compile Include="ModeloVentas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

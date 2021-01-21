@@ -37,7 +37,7 @@ namespace Modelos
             string query = "DELETE FROM TELA WHERE idTela="+id+";";
             SqlCommand cmd = new SqlCommand(query, this.conexion);
             cmd.ExecuteNonQuery();
-            this.conexion.Close();
+            this.conexion.Close(); 
         }
 
 
