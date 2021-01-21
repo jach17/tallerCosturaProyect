@@ -22,11 +22,80 @@ namespace Modelos
             //this.pedido = new Pedido();
         }
 
+        public void deletePedido(int id)
+        {
+            this.conexion.Open();
+            string query = "DELETE FROM PEDIDO WHERE idPedido="+id+";";
+            SqlCommand cmd = new SqlCommand(query, this.conexion);
+            cmd.ExecuteNonQuery();
+            this.conexion.Close();
+        }
+
+        public void updatePedido(
+            int idPedido,
+            int precioTotal,
+            int tipoPedido,
+            string descripcionPedido,
+            string nombreCliente,
+            string fechaEntrega,
+            string estatusPedido
+            )
+        {
+            this.conexion.Open();
+            string query =  "UPDATE PEDIDO SET " +
+                            "descripcionPedido = '"+descripcionPedido+"'," +
+                            "nombreCliente = '"+nombreCliente+"'," +
+                            "fechaEntrega = '"+fechaEntrega+"'," +
+                            "precioTotal = '"+precioTotal+"'," +
+                            "tipoPedido = '"+tipoPedido+"'," +
+                            "estatusPedido = '"+estatusPedido+"'" +
+                            "WHERE idPedido = "+idPedido+";";
+            SqlCommand cmd = new SqlCommand(query, this.conexion);
+            cmd.ExecuteNonQuery();
+            this.conexion.Close();
+        }
+
+
+        public ArrayList getAllPedidos()
+        {
+            ArrayList pedidos = new ArrayList();
+            this.conexion.Open();
+            string query = "SELECT * FROM PEDIDO WHERE estatusPedido!='Entregado'";
+            SqlCommand cmd = new SqlCommand(query, this.conexion);
+            SqlDataReader registro = cmd.ExecuteReader();
+            while (registro.Read())
+            {
+                ArrayList DATA_PEDIDO = new ArrayList();
+
+                int idPedido = Convert.ToInt32(registro["idPedido"]);
+                int precioTotal = Convert.ToInt32(registro["precioTotal"]);
+                int tipoPedido = Convert.ToInt32(registro["tipoPedido"]);
+                int idProducto = Convert.ToInt32(registro["idProducto"]);
+                string descripcionPedido = registro["descripcionPedido"].ToString();
+                string nombreCliente = registro["nombreCliente"].ToString();
+                string fechaEntrega = registro["fechaEntrega"].ToString();
+                string estatusPedido = registro["estatusPedido"].ToString();
+
+                DATA_PEDIDO.Add(idPedido);
+                DATA_PEDIDO.Add(precioTotal);
+                DATA_PEDIDO.Add(tipoPedido);
+                DATA_PEDIDO.Add(idProducto);
+                DATA_PEDIDO.Add(descripcionPedido);
+                DATA_PEDIDO.Add(nombreCliente);
+                DATA_PEDIDO.Add(fechaEntrega);
+                DATA_PEDIDO.Add(estatusPedido);
+
+                pedidos.Add(DATA_PEDIDO);
+            }
+            this.conexion.Close();
+            return pedidos;
+        }
+
        public ArrayList getPedidosExpress()
        {
             ArrayList pedidos = new ArrayList();
             this.conexion.Open();
-            string query = "SELECT * FROM PEDIDO WHERE tipoPedido=1 ORDER BY fechaEntrega ASC;";
+            string query = "SELECT * FROM PEDIDO WHERE tipoPedido=1 AND estatusPedido!='Entregado' ORDER BY idPedido DESC ;";
             SqlCommand cmd = new SqlCommand(query, this.conexion);
             SqlDataReader registro = cmd.ExecuteReader();
             while (registro.Read())
@@ -65,7 +134,7 @@ namespace Modelos
         {
             ArrayList pedidos = new ArrayList();
             this.conexion.Open();
-            string query = "SELECT * FROM PEDIDO WHERE tipoPedido=2 ORDER BY fechaEntrega ASC;";
+            string query = "SELECT * FROM PEDIDO WHERE tipoPedido=2 AND estatusPedido!='Entregado' ORDER BY idPedido DESC ;";
             SqlCommand cmd = new SqlCommand(query, this.conexion);
             SqlDataReader registro = cmd.ExecuteReader();
             while (registro.Read())

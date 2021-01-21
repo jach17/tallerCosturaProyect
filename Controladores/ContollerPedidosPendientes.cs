@@ -14,9 +14,13 @@ namespace Controladores
 
         Pedido pedidoPendienteExpress;
         Pedido pedidoPendienteNormal;
+        Pedido pedidoPendienteAll;
         Modelos.ModeloPedidosPendientes omp = new Modelos.ModeloPedidosPendientes();
         ArrayList pedidosPendientesExpress;
         ArrayList pedidosPendientesNormal;
+        ArrayList pedidosPendientesAll;
+
+       
 
 
         /*  INICIA PEDIDOS EXPRESS   */
@@ -94,9 +98,103 @@ namespace Controladores
             return this.pedidosPendientesNormal;
         }
 
-        /*  TERMINA PEDIDOS EXPRESS   */
+        /*  TERMINA PEDIDOS NORMAL   */
+
+        /*INICIA TODOS LOS PEDIDOS*/
+
+        public void setPedidosTodos()
+        {
+            pedidosPendientesAll = new ArrayList();
+            for (int i = 0; i < omp.getAllPedidos().Count; i++)
+            {
+                //Nueva instancia de un pedido para llenarlo
+                this.pedidoPendienteAll = new Pedido();
+
+                //Obtenemos de lista de arraylists que contienen los datos de los pedidos
+                //los datos de el pedido que indique el contador
+                ArrayList DATA_PEDIDO_ALL= (ArrayList)omp.getAllPedidos()[i];
+
+                //Llenamos nuestra instancia de pedidos con el data list que obtuvimos
+                this.pedidoPendienteAll.metodosIdPedido = Convert.ToInt32(DATA_PEDIDO_ALL[0]);
+                this.pedidoPendienteAll.metodosPrecioTotal = Convert.ToInt32(DATA_PEDIDO_ALL[1]);
+                this.pedidoPendienteAll.metodosTipoPedido = Convert.ToInt32(DATA_PEDIDO_ALL[2]);
+                this.pedidoPendienteAll.metodosIdProducto = Convert.ToInt32(DATA_PEDIDO_ALL[3]);
+                this.pedidoPendienteAll.metodosDescripcionPedido = (string)DATA_PEDIDO_ALL[4];
+                this.pedidoPendienteAll.metodosNombreCliente = (string)DATA_PEDIDO_ALL[5];
+                this.pedidoPendienteAll.metodosFechaEntrega = (string)DATA_PEDIDO_ALL[6];
+                this.pedidoPendienteAll.metodosEstatusPedido = (string)DATA_PEDIDO_ALL[7];
+
+                //Llenamos una lista con objetos de pedidos ya llenos con los registros
+                pedidosPendientesAll.Add(pedidoPendienteAll);
+
+            }
+        }
 
 
+        public ArrayList getTodosPedidos()
+        {
+            setPedidosTodos();
+            return pedidosPendientesAll;
+        }
 
+        public void updatePedido(Pedido p)
+        {
+            omp.updatePedido(
+                p.metodosIdPedido,
+                p.metodosPrecioTotal,
+                p.metodosTipoPedido,
+                p.metodosDescripcionPedido,
+                p.metodosNombreCliente,
+                p.metodosFechaEntrega,
+                p.metodosEstatusPedido
+            );
+        }
+
+        public void deletePedido(int id)
+        {
+            omp.deletePedido(id);
+        }
+        /*TERMINA TODOS LOS PEDIDOS*/
+
+        Modelos.ModeloNuevoPedido mnp = new Modelos.ModeloNuevoPedido();
+
+        public void fromPendientesToVentas(
+            string descripcionPedido,
+            string fecgaEntrega,
+            string nombreCliente,
+            int idPedido,
+            int precioTotal
+            )
+        {
+            mnp.fromPendienteToVentas(descripcionPedido, fecgaEntrega, nombreCliente, idPedido, precioTotal);
+        }
+        public ArrayList getVentas()
+        {
+            return setVentas(mnp.getVentas());
+        }
+        public ArrayList setVentas(ArrayList VENTAS)
+        {
+            ArrayList VENTAS_LIST= new ArrayList();
+            for (int i=0;i<VENTAS.Count;i++)
+            {
+                ArrayList VENTAS_DATA = (ArrayList)VENTAS[i];
+                Venta v = new Venta();
+                v.idVenta = Convert.ToInt32(VENTAS_DATA[0]);
+                v.descripcionPedido = VENTAS_DATA[1].ToString(); 
+                v.fechaVenta = VENTAS_DATA[2].ToString();
+                v.nombreCliente = VENTAS_DATA[3].ToString();
+                v.idPedido = Convert.ToInt32(VENTAS_DATA[4]);
+                v.precioTotal = Convert.ToInt32(VENTAS_DATA[4]);
+
+                VENTAS_LIST.Add(v);
+            }
+            return VENTAS_LIST;
+        }
+
+        
+        public void deleteVenta(int id)
+        {
+            mnp.deleteVenta(id);
+        }
     }
 }

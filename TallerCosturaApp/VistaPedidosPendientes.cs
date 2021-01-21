@@ -128,5 +128,10 @@ namespace TallerCosturaApp
         {
 
         }
+
+        private void PanelContentCardsExpress_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

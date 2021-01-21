@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,59 @@ namespace Modelos
 
         }
 
+
+        public void insertTela(string nombreTela, string colorTela, int cantidadExistencia, int idProv)
+        {
+            this.conexion.Open();
+            string query = "INSERT INTO TELA VALUES ('" + nombreTela + "', '" + colorTela + "', " + cantidadExistencia + ", " + idProv + ");";
+            SqlCommand cmd = new SqlCommand(query, this.conexion);
+            cmd.ExecuteNonQuery();
+            this.conexion.Close();
+        }
+
+        public void deleteTela(int id)
+        {
+            this.conexion.Open();
+            string query = "DELETE FROM TELA WHERE idTela="+id+";";
+            SqlCommand cmd = new SqlCommand(query, this.conexion);
+            cmd.ExecuteNonQuery();
+            this.conexion.Close(); 
+        }
+
+
+        public void updateTela(string nombreTela, string colorTela, int cantidadExistencia, int idProv, int idTelaUpdate)
+        {
+            this.conexion.Open();
+            string query = "UPDATE TELA SET nombreTela='"+nombreTela+"', colorTela='"+colorTela+"', cantidadExistente="+cantidadExistencia+", idProv="+idProv+"  WHERE idTela="+idTelaUpdate+";";
+            SqlCommand cmd = new SqlCommand(query, this.conexion);
+            cmd.ExecuteNonQuery();
+            this.conexion.Close();
+        }
+
+
+        public DataTable getInventario()
+        {
+            this.conexion.Open();
+            string query = "SELECT	idTela AS ID, nombreTela AS NOMBRE,	colorTela AS COLOR, cantidadExistente AS EXISTENCIA, nombreProv AS PROVEEDOR FROM TELA, PROVEEDOR WHERE TELA.idProv = PROVEEDOR.idProv; ";            SqlCommand cmd = new SqlCommand(query, this.conexion);
+            SqlDataAdapter adaptador = new SqlDataAdapter();
+            adaptador.SelectCommand = cmd;
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            this.conexion.Close();
+            return tabla;
+        }
+        public DataTable getGestionInventario()
+        {
+            this.conexion.Open();
+            string query = "SELECT	idTela AS ID, nombreTela AS NOMBRE, colorTela AS COLOR, FROM TELA;";
+            SqlCommand cmd = new SqlCommand(query, this.conexion);
+            SqlDataAdapter adaptador = new SqlDataAdapter();
+            adaptador.SelectCommand = cmd;
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            this.conexion.Close();
+            return tabla;
+        }
 
         /*Obtendra el nombre de la tela y el color*/
         public ArrayList getDataTelas()

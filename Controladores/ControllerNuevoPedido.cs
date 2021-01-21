@@ -72,6 +72,11 @@ namespace Controladores
         {
             return mnp.getLastIdProduct();
         }
+        public int getIdTelaForMaquilar(string nombreTela, string colorTela)
+        {
+            return mnp.getIdTelaForMaquilar(nombreTela, colorTela);
+        }
 
+        
     }
 }

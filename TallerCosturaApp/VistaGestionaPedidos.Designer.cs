@@ -39,11 +39,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.panelContentCardsVentas = new System.Windows.Forms.TableLayoutPanel();
@@ -54,11 +50,7 @@
             this.toolBarApp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.panelContentPedidos.SuspendLayout();
             this.SuspendLayout();
@@ -107,6 +99,7 @@
             // btnSalir
             // 
             this.btnSalir.AutoSize = true;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Location = new System.Drawing.Point(3, 285);
@@ -134,6 +127,7 @@
             // 
             this.btnGestionaInventario.AutoSize = true;
             this.btnGestionaInventario.BackColor = System.Drawing.Color.White;
+            this.btnGestionaInventario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGestionaInventario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnGestionaInventario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionaInventario.Location = new System.Drawing.Point(3, 171);
@@ -148,6 +142,7 @@
             // 
             this.btnVerInventario.AutoSize = true;
             this.btnVerInventario.BackColor = System.Drawing.Color.White;
+            this.btnVerInventario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVerInventario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnVerInventario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerInventario.Location = new System.Drawing.Point(3, 114);
@@ -162,6 +157,7 @@
             // 
             this.btnPedidosPendientes.AutoSize = true;
             this.btnPedidosPendientes.BackColor = System.Drawing.Color.White;
+            this.btnPedidosPendientes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPedidosPendientes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnPedidosPendientes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPedidosPendientes.Location = new System.Drawing.Point(3, 57);
@@ -175,6 +171,7 @@
             // btnNuevoPedido
             // 
             this.btnNuevoPedido.AutoSize = true;
+            this.btnNuevoPedido.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNuevoPedido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnNuevoPedido.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevoPedido.Location = new System.Drawing.Point(3, 0);
@@ -213,67 +210,24 @@
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.panel2, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(170, 139);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 59F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(627, 348);
             this.tableLayoutPanel2.TabIndex = 5;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.pictureBox6);
-            this.panel2.Controls.Add(this.pictureBox5);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 292);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(621, 53);
-            this.panel2.TabIndex = 1;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::TallerCosturaApp.Properties.Resources.btnDelete;
-            this.pictureBox6.Location = new System.Drawing.Point(213, 11);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(126, 31);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 8;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::TallerCosturaApp.Properties.Resources.btnUpdate;
-            this.pictureBox5.Location = new System.Drawing.Point(46, 11);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(126, 31);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 7;
-            this.pictureBox5.TabStop = false;
-            // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.tableLayoutPanel4);
             this.panel1.Controls.Add(this.panelContentPedidos);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(621, 283);
+            this.panel1.Size = new System.Drawing.Size(621, 342);
             this.panel1.TabIndex = 0;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::TallerCosturaApp.Properties.Resources.btnDelete;
-            this.pictureBox2.Location = new System.Drawing.Point(446, 231);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(126, 31);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
             // 
             // tableLayoutPanel4
             // 
@@ -281,12 +235,12 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.panelContentCardsVentas, 0, 1);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(403, 28);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(374, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.20468F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 84.79532F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(192, 197);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(221, 345);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // label3
@@ -298,7 +252,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(186, 29);
+            this.label3.Size = new System.Drawing.Size(215, 52);
             this.label3.TabIndex = 0;
             this.label3.Text = "VENTAS";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -309,11 +263,11 @@
             this.panelContentCardsVentas.ColumnCount = 1;
             this.panelContentCardsVentas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.panelContentCardsVentas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContentCardsVentas.Location = new System.Drawing.Point(3, 32);
+            this.panelContentCardsVentas.Location = new System.Drawing.Point(3, 55);
             this.panelContentCardsVentas.Name = "panelContentCardsVentas";
             this.panelContentCardsVentas.RowCount = 1;
             this.panelContentCardsVentas.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.panelContentCardsVentas.Size = new System.Drawing.Size(186, 162);
+            this.panelContentCardsVentas.Size = new System.Drawing.Size(215, 287);
             this.panelContentCardsVentas.TabIndex = 1;
             this.panelContentCardsVentas.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContentCardsVentas_Paint);
             // 
@@ -323,12 +277,12 @@
             this.panelContentPedidos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.panelContentPedidos.Controls.Add(this.label2, 0, 0);
             this.panelContentPedidos.Controls.Add(this.panelContentCardsTodosPedidos, 0, 1);
-            this.panelContentPedidos.Location = new System.Drawing.Point(46, 28);
+            this.panelContentPedidos.Location = new System.Drawing.Point(46, 3);
             this.panelContentPedidos.Name = "panelContentPedidos";
             this.panelContentPedidos.RowCount = 2;
             this.panelContentPedidos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.20468F));
             this.panelContentPedidos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 84.79532F));
-            this.panelContentPedidos.Size = new System.Drawing.Size(296, 230);
+            this.panelContentPedidos.Size = new System.Drawing.Size(307, 345);
             this.panelContentPedidos.TabIndex = 1;
             // 
             // label2
@@ -340,7 +294,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(290, 34);
+            this.label2.Size = new System.Drawing.Size(301, 52);
             this.label2.TabIndex = 0;
             this.label2.Text = "PEDIDOS";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -351,12 +305,14 @@
             this.panelContentCardsTodosPedidos.ColumnCount = 1;
             this.panelContentCardsTodosPedidos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.panelContentCardsTodosPedidos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContentCardsTodosPedidos.Location = new System.Drawing.Point(3, 37);
+            this.panelContentCardsTodosPedidos.Location = new System.Drawing.Point(3, 55);
             this.panelContentCardsTodosPedidos.Name = "panelContentCardsTodosPedidos";
             this.panelContentCardsTodosPedidos.RowCount = 1;
             this.panelContentCardsTodosPedidos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.panelContentCardsTodosPedidos.Size = new System.Drawing.Size(290, 190);
+            this.panelContentCardsTodosPedidos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 287F));
+            this.panelContentCardsTodosPedidos.Size = new System.Drawing.Size(301, 287);
             this.panelContentCardsTodosPedidos.TabIndex = 1;
+            this.panelContentCardsTodosPedidos.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContentCardsTodosPedidos_Paint);
             // 
             // VistaGestionaPedidos
             // 
@@ -374,11 +330,7 @@
             this.toolBarApp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             this.panelContentPedidos.ResumeLayout(false);
@@ -400,16 +352,12 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel panelContentPedidos;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TableLayoutPanel panelContentCardsTodosPedidos;
         private System.Windows.Forms.TableLayoutPanel panelContentCardsVentas;
+        private System.Windows.Forms.TableLayoutPanel panelContentCardsTodosPedidos;
     }
 }

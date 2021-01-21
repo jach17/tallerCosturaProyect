@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.toolBarApp = new System.Windows.Forms.TableLayoutPanel();
             this.btnSalir = new System.Windows.Forms.Label();
@@ -40,12 +43,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.contentCards = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnShowInventario = new System.Windows.Forms.PictureBox();
+            this.btnShowProveedores = new System.Windows.Forms.PictureBox();
+            this.dgvGestion = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
             this.toolBarApp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -54,9 +58,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnShowInventario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnShowProveedores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGestion)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -103,6 +107,7 @@
             // btnSalir
             // 
             this.btnSalir.AutoSize = true;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Location = new System.Drawing.Point(3, 285);
@@ -116,6 +121,7 @@
             // btnGestionaPedidos
             // 
             this.btnGestionaPedidos.AutoSize = true;
+            this.btnGestionaPedidos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGestionaPedidos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnGestionaPedidos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionaPedidos.Location = new System.Drawing.Point(3, 228);
@@ -143,6 +149,7 @@
             // 
             this.btnVerInventario.AutoSize = true;
             this.btnVerInventario.BackColor = System.Drawing.Color.White;
+            this.btnVerInventario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVerInventario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnVerInventario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerInventario.Location = new System.Drawing.Point(3, 114);
@@ -157,6 +164,7 @@
             // 
             this.btnPedidosPendientes.AutoSize = true;
             this.btnPedidosPendientes.BackColor = System.Drawing.Color.White;
+            this.btnPedidosPendientes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPedidosPendientes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnPedidosPendientes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPedidosPendientes.Location = new System.Drawing.Point(3, 57);
@@ -170,6 +178,7 @@
             // btnNuevoPedido
             // 
             this.btnNuevoPedido.AutoSize = true;
+            this.btnNuevoPedido.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNuevoPedido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnNuevoPedido.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevoPedido.Location = new System.Drawing.Point(3, 0);
@@ -219,75 +228,133 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.contentCards);
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.btnShowInventario);
+            this.panel1.Controls.Add(this.btnShowProveedores);
+            this.panel1.Controls.Add(this.dgvGestion);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(621, 342);
             this.panel1.TabIndex = 0;
             // 
+            // contentCards
+            // 
+            this.contentCards.Location = new System.Drawing.Point(323, 3);
+            this.contentCards.Name = "contentCards";
+            this.contentCards.Size = new System.Drawing.Size(290, 330);
+            this.contentCards.TabIndex = 6;
+            // 
             // pictureBox6
             // 
+            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox6.Image = global::TallerCosturaApp.Properties.Resources.btnDelete;
-            this.pictureBox6.Location = new System.Drawing.Point(450, 288);
+            this.pictureBox6.Location = new System.Drawing.Point(105, 309);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(126, 31);
+            this.pictureBox6.Size = new System.Drawing.Size(98, 33);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 5;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.PictureBox6_Click);
             // 
             // pictureBox5
             // 
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Image = global::TallerCosturaApp.Properties.Resources.btnUpdate;
-            this.pictureBox5.Location = new System.Drawing.Point(220, 288);
+            this.pictureBox5.Location = new System.Drawing.Point(3, 309);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(126, 31);
+            this.pictureBox5.Size = new System.Drawing.Size(97, 33);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 4;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.PictureBox5_Click);
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = global::TallerCosturaApp.Properties.Resources.btnAdd;
-            this.pictureBox4.Location = new System.Drawing.Point(78, 288);
+            this.pictureBox4.Location = new System.Drawing.Point(209, 309);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(126, 31);
+            this.pictureBox4.Size = new System.Drawing.Size(108, 34);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.PictureBox4_Click);
             // 
-            // pictureBox3
+            // btnShowInventario
             // 
-            this.pictureBox3.Image = global::TallerCosturaApp.Properties.Resources.btnMates;
-            this.pictureBox3.Location = new System.Drawing.Point(78, 10);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(176, 44);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
+            this.btnShowInventario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnShowInventario.Image = global::TallerCosturaApp.Properties.Resources.btnMates;
+            this.btnShowInventario.Location = new System.Drawing.Point(4, 3);
+            this.btnShowInventario.Name = "btnShowInventario";
+            this.btnShowInventario.Size = new System.Drawing.Size(137, 44);
+            this.btnShowInventario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnShowInventario.TabIndex = 2;
+            this.btnShowInventario.TabStop = false;
+            this.btnShowInventario.Click += new System.EventHandler(this.BtnShowInventario_Click);
             // 
-            // pictureBox2
+            // btnShowProveedores
             // 
-            this.pictureBox2.Image = global::TallerCosturaApp.Properties.Resources.btnProovs;
-            this.pictureBox2.Location = new System.Drawing.Point(384, 10);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(175, 44);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.btnShowProveedores.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnShowProveedores.Image = global::TallerCosturaApp.Properties.Resources.btnProovs;
+            this.btnShowProveedores.Location = new System.Drawing.Point(180, 3);
+            this.btnShowProveedores.Name = "btnShowProveedores";
+            this.btnShowProveedores.Size = new System.Drawing.Size(137, 44);
+            this.btnShowProveedores.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnShowProveedores.TabIndex = 1;
+            this.btnShowProveedores.TabStop = false;
+            this.btnShowProveedores.Click += new System.EventHandler(this.PictureBox2_Click);
             // 
-            // dataGridView1
+            // dgvGestion
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(62, 62);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(514, 220);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvGestion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvGestion.BackgroundColor = System.Drawing.Color.White;
+            this.dgvGestion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvGestion.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvGestion.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Eras Medium ITC", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvGestion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvGestion.ColumnHeadersHeight = 35;
+            this.dgvGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Eras Light ITC", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvGestion.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvGestion.EnableHeadersVisualStyles = false;
+            this.dgvGestion.Location = new System.Drawing.Point(4, 53);
+            this.dgvGestion.Name = "dgvGestion";
+            this.dgvGestion.ReadOnly = true;
+            this.dgvGestion.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvGestion.RowHeadersVisible = false;
+            this.dgvGestion.RowHeadersWidth = 50;
+            this.dgvGestion.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Eras Light ITC", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvGestion.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvGestion.RowTemplate.Height = 30;
+            this.dgvGestion.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvGestion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvGestion.Size = new System.Drawing.Size(313, 250);
+            this.dgvGestion.TabIndex = 0;
+            this.dgvGestion.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvGestion_CellClick);
+            this.dgvGestion.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvGestion_CellContentClick);
             // 
             // VistaGestionaInventario
             // 
@@ -309,9 +376,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnShowInventario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnShowProveedores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGestion)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -330,11 +397,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.PictureBox btnShowProveedores;
+        private System.Windows.Forms.DataGridView dgvGestion;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox btnShowInventario;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Panel contentCards;
     }
 }
