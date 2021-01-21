@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace Modelos
 {
@@ -17,6 +18,45 @@ namespace Modelos
         {
             c = new Conexion();
             this.conexion = c.getConexion();
+        }
+
+        public void fromPendienteToVentas()
+        {
+            this.conexion.Open();
+            string query = "INSERT INTO VENTA" +
+                                "SELECT descripcionPedido, " +
+                                        "fechaEntrega, " +
+                                        "nombreCliente, " +
+                                        "idPedido, " +
+                                        "precioTotal" +
+                                 "FROM PEDIDO" +
+                                 "WHERE estatusPedido = 'Entregado'";
+            SqlCommand cmd = new SqlCommand(query, this.conexion);
+            cmd.ExecuteNonQuery();
+            this.conexion.Close();
+        }
+
+        public ArrayList getVentas()
+        {
+            ArrayList VENTAS= new ArrayList();
+            this.conexion.Open();
+            string query = "SELECT * FROM VENTA;";
+            SqlCommand cmd = new SqlCommand(query, this.conexion);
+            SqlDataReader registros = cmd.ExecuteReader();
+            while (registros.Read())
+            {
+                ArrayList DATA_VENTAS = new ArrayList();
+                DATA_VENTAS.Add(registros["idVenta"]);
+                DATA_VENTAS.Add(registros["descripcionPedido"]);
+                DATA_VENTAS.Add(registros["fechaVenta"]);
+                DATA_VENTAS.Add(registros["nombreCliente"]);
+                DATA_VENTAS.Add(registros["idPedido"]);
+                DATA_VENTAS.Add(registros["precioTotal"]);
+
+                VENTAS.Add(DATA_VENTAS);
+            }
+            this.conexion.Close();
+            return VENTAS;
         }
 
         public int getIdTelaForMaquilar(string nombreTela, string colorTela)

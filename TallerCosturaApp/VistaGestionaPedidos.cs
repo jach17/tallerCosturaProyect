@@ -15,12 +15,14 @@ namespace TallerCosturaApp
     {
         Controladores.ContollerPedidosPendientes ocpp;
         ArrayList PEDIDOS_ALL;
+        ArrayList VENTAS;
         public VistaGestionaPedidos()
         {
             InitializeComponent();
             ocpp = new Controladores.ContollerPedidosPendientes();
             PEDIDOS_ALL = new ArrayList();
             PEDIDOS_ALL = ocpp.getTodosPedidos();
+           // VENTAS
             /*
            this.panelContentCardsTodosPedidos.Controls.Add(new CardTodosPedidos("Express"));
            this.panelContentCardsTodosPedidos.Controls.Add(new CardTodosPedidos("Express"));
@@ -33,6 +35,11 @@ namespace TallerCosturaApp
             this.panelContentCardsVentas.Controls.Add(new CardVentas("Jony"));
             */
             createAllCards();
+
+        }
+
+        public void createVentasCards()
+        {
 
         }
 
